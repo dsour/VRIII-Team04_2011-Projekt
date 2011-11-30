@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_OrgYksus" object="${orgyksus}" path="/orgyksuses" z="DOsgKhUGzZ3nKVWSPe4LZbVFlMg=">
+        <field:display date="true" dateTimePattern="${orgYksus_alates_date_format}" field="alates" id="s_ee_itcollege_group04_2011_entities_OrgYksus_alates" object="${orgyksus}" z="2AXjviBBQKgXx3rxrdeOAS0enus="/>
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_OrgYksus_avaja" object="${orgyksus}" z="0XRJMjWT80h2TN3EMmNS7d31GtI="/>
+        <field:display date="true" dateTimePattern="${orgYksus_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_OrgYksus_avatud" object="${orgyksus}" z="c18nutEtv7DRsWWelgFPCbNMzRc="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_OrgYksus_kommentaar" object="${orgyksus}" z="29VgnetZMDIhMC8iiztNz+04M7Y="/>
+        <field:display field="kood" id="s_ee_itcollege_group04_2011_entities_OrgYksus_kood" object="${orgyksus}" z="aT4zs/IT912f2WW1q5XPvlIUD/E="/>
+        <field:display date="true" dateTimePattern="${orgYksus_kuni_date_format}" field="kuni" id="s_ee_itcollege_group04_2011_entities_OrgYksus_kuni" object="${orgyksus}" z="HpUGP+mEO60Xfto1qMkJVpLOOP4="/>
+        <field:display date="true" dateTimePattern="${orgYksus_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_OrgYksus_muudetud" object="${orgyksus}" z="s29PnCN0r9tAJjGTUbzQZmnshxE="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_OrgYksus_muutja" object="${orgyksus}" z="nflTzhNwBC5LI5q37AJ0ZHRccaY="/>
+        <field:display field="nimetus" id="s_ee_itcollege_group04_2011_entities_OrgYksus_nimetus" object="${orgyksus}" z="8D8G1mCUJthw9HBV0ZGnMum+AkU="/>
+        <field:display date="true" dateTimePattern="${orgYksus_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_OrgYksus_suletud" object="${orgyksus}" z="ti94j4XfFtS5eHTeCP1oJ9T/G2M="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_OrgYksus_sulgeja" object="${orgyksus}" z="cySmO0PQI1w4DWFS/CHJRAorkTU="/>
+        <field:display field="orgYksus" id="s_ee_itcollege_group04_2011_entities_OrgYksus_orgYksus" object="${orgyksus}" z="SS8g6NIR1Wf1l40NXF/eB09/Hhk="/>
+        <field:display field="vaeosa" id="s_ee_itcollege_group04_2011_entities_OrgYksus_vaeosa" object="${orgyksus}" z="ik8dgrAQeVvzKUD7dfzuUyxLuao="/>
+    </page:show>
+</div>

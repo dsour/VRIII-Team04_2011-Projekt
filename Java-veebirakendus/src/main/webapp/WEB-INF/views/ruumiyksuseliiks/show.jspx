@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_RuumiyksuseLiik" object="${ruumiyksuseliik}" path="/ruumiyksuseliiks" z="V5jofShK1FTIWa8zkrdeKXIrw3M=">
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_avaja" object="${ruumiyksuseliik}" z="dHL2j00G8kIRaKJjmvXnFDKVZ7w="/>
+        <field:display date="true" dateTimePattern="${ruumiyksuseLiik_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_avatud" object="${ruumiyksuseliik}" z="v1Qc5igcjZEabBWXAZClE6WleGk="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_kommentaar" object="${ruumiyksuseliik}" z="XaHPRG6abqM4mh41iNZrFi6dluI="/>
+        <field:display field="kood" id="s_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_kood" object="${ruumiyksuseliik}" z="tEN7n6S3lJoSVBzwln9zHDmZeno="/>
+        <field:display date="true" dateTimePattern="${ruumiyksuseLiik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_muudetud" object="${ruumiyksuseliik}" z="hihz7gnh5xCqGJ67IhD5kVOs03M="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_muutja" object="${ruumiyksuseliik}" z="T63w8PYWH7ppf1R3tm6BXI4eRPQ="/>
+        <field:display field="nimetus" id="s_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_nimetus" object="${ruumiyksuseliik}" z="IsyCcCbkqJ7RMMy98GZMLn43mHM="/>
+        <field:display date="true" dateTimePattern="${ruumiyksuseLiik_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_suletud" object="${ruumiyksuseliik}" z="fx4lAcJEOdwu3b7g7sudOpK4ZhI="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_sulgeja" object="${ruumiyksuseliik}" z="HrZtaqZIB2gOkEmMfhannqJExpw="/>
+    </page:show>
+</div>

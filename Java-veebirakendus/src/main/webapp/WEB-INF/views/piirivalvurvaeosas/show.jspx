@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa" object="${piirivalvurvaeosa}" path="/piirivalvurvaeosas" z="7rUT5tBjaA3AwagTUqk14yrqVnA=">
+        <field:display date="true" dateTimePattern="${piirivalvurVaeosa_alates_date_format}" field="alates" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_alates" object="${piirivalvurvaeosa}" z="gS9OEzUOx0JLRqfRAsp9AYmFxK0="/>
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_avaja" object="${piirivalvurvaeosa}" z="tYmcaW8YeWEx56whiu4D5QCllNc="/>
+        <field:display date="true" dateTimePattern="${piirivalvurVaeosa_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_avatud" object="${piirivalvurvaeosa}" z="lhiR/26HRwuzBAXeRF53mvlt0Q4="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_kommentaar" object="${piirivalvurvaeosa}" z="Idf2xcd9FBEks7iDFk0HUKVwfQw="/>
+        <field:display field="koormus" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_koormus" object="${piirivalvurvaeosa}" z="NNaDcQdVH950okbQZF7sSiJToQI="/>
+        <field:display date="true" dateTimePattern="${piirivalvurVaeosa_kuni_date_format}" field="kuni" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_kuni" object="${piirivalvurvaeosa}" z="Bg28ZA67eBTf4pXIBC5ktDaFKmQ="/>
+        <field:display date="true" dateTimePattern="${piirivalvurVaeosa_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_muudetud" object="${piirivalvurvaeosa}" z="94wxm+AAGgwpUaKlbAFpX8g9mng="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_muutja" object="${piirivalvurvaeosa}" z="DEamtk0UzLlAUzhHIcH8aLHKRM0="/>
+        <field:display date="true" dateTimePattern="${piirivalvurVaeosa_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_suletud" object="${piirivalvurvaeosa}" z="/MLZFRL9Dk2Kc87gmgkDR/BML/Q="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_sulgeja" object="${piirivalvurvaeosa}" z="JHgcI1VwNWMFkDRExa32XYskGAc="/>
+        <field:display field="ametVaeosa" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_ametVaeosa" object="${piirivalvurvaeosa}" z="2yfpPdT65ymUj6Cg//M7rjHVS20="/>
+        <field:display field="piirivalvur" id="s_ee_itcollege_group04_2011_entities_PiirivalvurVaeosa_piirivalvur" object="${piirivalvurvaeosa}" z="izdWPCitt9pYBubfxNuZTRV8pxA="/>
+    </page:show>
+</div>

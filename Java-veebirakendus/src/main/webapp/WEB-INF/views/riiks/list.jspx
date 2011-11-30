@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_group04_2011_entities_Riik" items="${riiks}" z="X7477azjp4B3huBFtocT0i3gN8M=">
+        <table:table data="${riiks}" id="l_ee_itcollege_group04_2011_entities_Riik" path="/riiks" typeIdFieldName="riikId" z="nz0aqY5C6QtAkv3/6i5bmSuFkSA=">
+            <table:column id="c_ee_itcollege_group04_2011_entities_Riik_ansiKood" property="ansiKood" z="Bwpv199I+B40j9YzayBnp/BA+sI="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Riik_avaja" property="avaja" z="aUEgvIdvy5c8XZFphEprI2dfu/w="/>
+            <table:column date="true" dateTimePattern="${riik_avatud_date_format}" id="c_ee_itcollege_group04_2011_entities_Riik_avatud" property="avatud" z="5YnMLI/F2LXzBUvhwMbRyM3JS3E="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Riik_isoKood" property="isoKood" z="CCOMdXwO+1iWp2Z2cFEdi6dEXqs="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Riik_kommentaar" property="kommentaar" z="enilXWYZWr6CEf/OMTGx18KEnfg="/>
+            <table:column date="true" dateTimePattern="${riik_muudetud_date_format}" id="c_ee_itcollege_group04_2011_entities_Riik_muudetud" property="muudetud" z="L/vMKwsh/dQvQxMd6RFM6Z5GhKs="/>
+        </table:table>
+    </page:list>
+</div>

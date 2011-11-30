@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_AmetVaeosa" object="${ametvaeosa}" path="/ametvaeosas" z="KaM9iQ2Pu97nwPQuadtUcheQP1s=">
+        <field:display date="true" dateTimePattern="${ametVaeosa_alates_date_format}" field="alates" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_alates" object="${ametvaeosa}" z="6SiBd3auX+HshMgWAGnZ/M7SmVE="/>
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_avaja" object="${ametvaeosa}" z="eKsYm9m8vVFh65mRsIYB8RtSCVw="/>
+        <field:display date="true" dateTimePattern="${ametVaeosa_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_avatud" object="${ametvaeosa}" z="MmTbaYqbR0e81DCnOvD6DsNNzdo="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_kommentaar" object="${ametvaeosa}" z="bnG8zcPQx6oXby62VH92wnVNQd4="/>
+        <field:display date="true" dateTimePattern="${ametVaeosa_kuni_date_format}" field="kuni" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_kuni" object="${ametvaeosa}" z="FaldZoK5qtIbzQvVf0IzsJ4dL4g="/>
+        <field:display date="true" dateTimePattern="${ametVaeosa_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_muudetud" object="${ametvaeosa}" z="bB2ad0WlrolAUacoZQT1Bv0xDIQ="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_muutja" object="${ametvaeosa}" z="B/cJYBNm/6dqAvMxwp7gZZKFT1Q="/>
+        <field:display date="true" dateTimePattern="${ametVaeosa_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_suletud" object="${ametvaeosa}" z="WehNzory7VavUd7WP+mpEsiRizo="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_sulgeja" object="${ametvaeosa}" z="mNR+TfuVmcc6yFgjHyMHvXqIjXY="/>
+        <field:display field="amet" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_amet" object="${ametvaeosa}" z="ReZ4BnZVnE5/S42HuxfQ/BGKrvI="/>
+        <field:display field="vaeosa" id="s_ee_itcollege_group04_2011_entities_AmetVaeosa_vaeosa" object="${ametvaeosa}" z="g6GU/qL+3umUxCpPYyg1uwy2YbE="/>
+    </page:show>
+</div>

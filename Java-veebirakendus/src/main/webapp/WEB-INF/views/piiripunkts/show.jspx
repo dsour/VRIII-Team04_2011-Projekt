@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_Piiripunkt" object="${piiripunkt}" path="/piiripunkts" z="pU5xQoEiIa3WhSMWcHptCnC5aDo=">
+        <field:display date="true" dateTimePattern="${piiripunkt_alates_date_format}" field="alates" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_alates" object="${piiripunkt}" z="CmY7roSaaoGU3kUordE8HlJvexM="/>
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_avaja" object="${piiripunkt}" z="BXeuYVPuYX1l+GnCOrVe22XF/vQ="/>
+        <field:display date="true" dateTimePattern="${piiripunkt_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_avatud" object="${piiripunkt}" z="SkSLVs6lJU7RULZ41I5Hnagy1fQ="/>
+        <field:display field="gpsLatitude" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_gpsLatitude" object="${piiripunkt}" z="a+RsSPFfS5SSNaUHgQhjgqbAt5g="/>
+        <field:display field="gpsLongituide" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_gpsLongituide" object="${piiripunkt}" z="nNFBmt2MgwndJLK5PMMPEM6zDFw="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_kommentaar" object="${piiripunkt}" z="wwgSnFDlNNFM9EXCouFCYTrXQyE="/>
+        <field:display field="kood" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_kood" object="${piiripunkt}" z="eMxmPPUR+F+vJTLtzrmmCmH38RY="/>
+        <field:display field="korgusMerepinnast" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_korgusMerepinnast" object="${piiripunkt}" z="Lj3NiJuQR5fnGRspxMAjRamhLTE="/>
+        <field:display date="true" dateTimePattern="${piiripunkt_kuni_date_format}" field="kuni" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_kuni" object="${piiripunkt}" z="91KmjrAUD5SJTs16tTjSnOoTX2Y="/>
+        <field:display date="true" dateTimePattern="${piiripunkt_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_muudetud" object="${piiripunkt}" z="2LUI+MSjK6wQBQpy40MiPZxY9nk="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_muutja" object="${piiripunkt}" z="0yIYgQRJX65Kq5wyygPGIDQKVOI="/>
+        <field:display field="nimetus" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_nimetus" object="${piiripunkt}" z="i+Uyivwde/8IQtStoOebVCwdsUM="/>
+        <field:display date="true" dateTimePattern="${piiripunkt_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_suletud" object="${piiripunkt}" z="IYD5exMNpA9u2BBD4+fBAaH8ox0="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_Piiripunkt_sulgeja" object="${piiripunkt}" z="RLtLDk1zYyCEJvmuzRJ5F8kpLZ0="/>
+    </page:show>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_group04_2011_entities_Vahtkond" items="${vahtkonds}" z="HcrTdMj9N2vgt1uBsbOyZHlTey8=">
+        <table:table data="${vahtkonds}" id="l_ee_itcollege_group04_2011_entities_Vahtkond" path="/vahtkonds" typeIdFieldName="vahtkondId" z="gCvnNTRikulujBm6qubvIXwBkW8=">
+            <table:column date="true" dateTimePattern="${vahtkond_alates_date_format}" id="c_ee_itcollege_group04_2011_entities_Vahtkond_alates" property="alates" z="ueBe64AYG0O3usIBVNiBZxV3l4Q="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Vahtkond_avaja" property="avaja" z="rzWhWs+2HSUvrpdELXktbTte8eY="/>
+            <table:column date="true" dateTimePattern="${vahtkond_avatud_date_format}" id="c_ee_itcollege_group04_2011_entities_Vahtkond_avatud" property="avatud" z="TbFNHM1qkl+l6zYQjq25o0MtHSo="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Vahtkond_kommentaar" property="kommentaar" z="JDy4tIHCpSAxt4BQB7p8wytfvNM="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Vahtkond_kood" property="kood" z="Ve1P9gn+/dk5QLKAAOVUxmnxSEM="/>
+            <table:column date="true" dateTimePattern="${vahtkond_kuni_date_format}" id="c_ee_itcollege_group04_2011_entities_Vahtkond_kuni" property="kuni" z="ik1+iw7BQraPwqBL86kH0kygnVQ="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_Auaste" object="${auaste}" path="/auastes" z="aDaqCvCNdPxpzR/aMxt9n/RiD0s=">
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_Auaste_avaja" object="${auaste}" z="jsyUOQwxhvdlMNpi3av/8xwMtu0="/>
+        <field:display date="true" dateTimePattern="${auaste_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_Auaste_avatud" object="${auaste}" z="x/KqIC37p6YkYFmcfhVgwcrr3Nc="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_Auaste_kommentaar" object="${auaste}" z="eqeDN0x9MPDl7/DuKnd/q4xzN58="/>
+        <field:display field="kood" id="s_ee_itcollege_group04_2011_entities_Auaste_kood" object="${auaste}" z="Y5ILIDJSDJJa2B6Ao4KxHBhh4wY="/>
+        <field:display date="true" dateTimePattern="${auaste_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_Auaste_muudetud" object="${auaste}" z="aiErSY6VNjwA8Ocnek0Ys+yEnfY="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_Auaste_muutja" object="${auaste}" z="i1BvotvQaGvcMUDWsouWHCeykzQ="/>
+        <field:display field="nimetus" id="s_ee_itcollege_group04_2011_entities_Auaste_nimetus" object="${auaste}" z="yKhe3sqjh5ZOGPnZuzBmGDGkRwo="/>
+        <field:display date="true" dateTimePattern="${auaste_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_Auaste_suletud" object="${auaste}" z="qmGiB8D86NnLDy08sNVCfQc6J0c="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_Auaste_sulgeja" object="${auaste}" z="1HWqMN2a476Kq7bsNAndkYq/J2o="/>
+    </page:show>
+</div>

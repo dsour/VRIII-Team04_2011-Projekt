@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_group04_2011_entities_Voodikoht" items="${voodikohts}" z="iA9xCdksZ1v8NgjDYZ0jMIkH4VM=">
+        <table:table data="${voodikohts}" id="l_ee_itcollege_group04_2011_entities_Voodikoht" path="/voodikohts" typeIdFieldName="voodikohtId" z="VmGBX2qv5OYVXak8h36i6GDu98o=">
+            <table:column id="c_ee_itcollege_group04_2011_entities_Voodikoht_avaja" property="avaja" z="w1wVOydf8cdEKxgbdRWXBqINIR0="/>
+            <table:column date="true" dateTimePattern="${voodikoht_avatud_date_format}" id="c_ee_itcollege_group04_2011_entities_Voodikoht_avatud" property="avatud" z="kPTZpXvDcEbNcrffHhTE9m/9js0="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Voodikoht_kommentaar" property="kommentaar" z="EWE7V+bGScProSahdIo9ZyOIwik="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Voodikoht_laius" property="laius" z="/7rf6AJCFgLuVd9FfM9Z5LN3DFs="/>
+            <table:column date="true" dateTimePattern="${voodikoht_muudetud_date_format}" id="c_ee_itcollege_group04_2011_entities_Voodikoht_muudetud" property="muudetud" z="po4I4WIe8GJHfV+143Y2OYS8ICo="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Voodikoht_muutja" property="muutja" z="T4cBjKM2kqhkcWv0N73KFlMTeGs="/>
+        </table:table>
+    </page:list>
+</div>

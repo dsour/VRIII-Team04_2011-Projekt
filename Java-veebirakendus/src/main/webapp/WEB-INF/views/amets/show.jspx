@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_Amet" object="${amet}" path="/amets" z="IFPXihdQ8daP9qG2/Nq6OCVEaNM=">
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_Amet_avaja" object="${amet}" z="9Fk9XqfIEFAGzS+W5bM9GTwq/NQ="/>
+        <field:display date="true" dateTimePattern="${amet_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_Amet_avatud" object="${amet}" z="11E0pOV3atu6TyuhYv5CbDZFqr4="/>
+        <field:display field="iscoKood" id="s_ee_itcollege_group04_2011_entities_Amet_iscoKood" object="${amet}" z="FUUSzAQxcSyHXsnZnuXKZH1Jcm4="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_Amet_kommentaar" object="${amet}" z="TwISyXSwjdCTSAhD42ZpZ/NiNfw="/>
+        <field:display date="true" dateTimePattern="${amet_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_Amet_muudetud" object="${amet}" z="uPbnCVXP7wSfa5VcJZZE77huBPQ="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_Amet_muutja" object="${amet}" z="bIJToJ3v3i28KyVm8+7jcYwebkY="/>
+        <field:display field="nimetus" id="s_ee_itcollege_group04_2011_entities_Amet_nimetus" object="${amet}" z="3pHvnZjai5fdZoA24Z17pnZ2PkA="/>
+        <field:display date="true" dateTimePattern="${amet_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_Amet_suletud" object="${amet}" z="DF50rWpoQOq06ZwcYi31nmQU818="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_Amet_sulgeja" object="${amet}" z="qx9JA8FfAThJXcfArc6WwhC44Ds="/>
+    </page:show>
+</div>

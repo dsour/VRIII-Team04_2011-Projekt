@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_ee_itcollege_group04_2011_entities_VoimalikAlluvus" modelAttribute="voimalikAlluvus" path="/voimalikalluvuses" render="${empty dependencies}" z="JMbdoPkAH1L8fc2J61B9hy0s3To=">
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_VoimalikAlluvus_avaja" z="j881Dqhl5pZOPGqvk1UYThwdStQ="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_VoimalikAlluvus_avatud" z="pkyORlt7215d9bNjgfy4ueast5s="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_VoimalikAlluvus_kommentaar" z="bR7trI/ymzo+KwmeAI2ZM1ntNLI="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_VoimalikAlluvus_muudetud" z="5bfZe7OAsXvQjq6gq7mXbFWXxiA="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_VoimalikAlluvus_muutja" z="6PrQs0PpSnwst3vVHxUq2AYOJp8="/>
+        <field:datetime dateTimePattern="${voimalikAlluvus_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_VoimalikAlluvus_suletud" z="oQFtpX9ClrrcHH9YSPZDF8Yv+cY="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_VoimalikAlluvus_sulgeja" z="RjuUCftGEbUyF4tlj7407ntrOK8="/>
+        <field:input field="riigiAdminYksuseLiik1" id="c_ee_itcollege_group04_2011_entities_VoimalikAlluvus_riigiAdminYksuseLiik1" z="5tT3RMbNQRfe0sG8LOZGuka2k8A="/>
+        <field:input field="riigiAdminYksuseLiik2" id="c_ee_itcollege_group04_2011_entities_VoimalikAlluvus_riigiAdminYksuseLiik2" z="xfCgCodW7kVXCEgFPD7dUcDto2w="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_group04_2011_entities_VoimalikAlluvus" render="${not empty dependencies}" z="7a64OiZkXfYtoJf8DhaPnFYE/ck="/>
+</div>

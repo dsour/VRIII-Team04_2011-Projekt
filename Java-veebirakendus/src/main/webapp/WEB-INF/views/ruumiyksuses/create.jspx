@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_ee_itcollege_group04_2011_entities_Ruumiyksus" modelAttribute="ruumiyksus" path="/ruumiyksuses" render="${empty dependencies}" z="UMEwXnh5a8eG7gfkD8hThwWF1js=">
+        <field:input field="aadress" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_aadress" z="R0gc6wTAvNtDjXXMgElcHSwMfuw="/>
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_avaja" z="3TA9cNHXdb/PxJB9dTE+hbhKMGQ="/>
+        <field:datetime dateTimePattern="${ruumiyksus_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_avatud" z="lnzn8Sg2SC9gAwM2QjPoWSjeskU="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_kommentaar" z="wYQdul98fKG1EpDWEHl9si/XSwM="/>
+        <field:input field="kood" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_kood" z="FpZVgzjk7QwJRY3THA9YCJcObX8="/>
+        <field:datetime dateTimePattern="${ruumiyksus_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_muudetud" z="8TitAgRacL78c/816mZvx+uP1ck="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_muutja" z="KcZ7w/ThdzCxuHB4aCjszdKt/xg="/>
+        <field:input field="nimetus" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_nimetus" z="+uptXeWZgAw/SqA/lF6csRSe/n0="/>
+        <field:datetime dateTimePattern="${ruumiyksus_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_suletud" z="Cr30PHfu3JMLqTvAvEQ9zNv9gnw="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_sulgeja" z="hfOVX/+fOpkaqTRXXPwY6RApBfk="/>
+        <field:select field="riigiAdminYksus" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_riigiAdminYksus" itemValue="riigiAdminYksusId" items="${riigiadminyksuses}" path="/riigiadminyksuses" z="KMdsp3RY/ULtDdy+/xAPgNvcYIQ="/>
+        <field:select field="ruumiyksus" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_ruumiyksus" itemValue="ruumiyksusId" items="${ruumiyksuses}" path="/ruumiyksuses" z="q9H56LZdDb0yQR4Yt/3V2FLMItc="/>
+        <field:simple field="ruumiyksuses" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_ruumiyksuses" messageCode="entity_reference_not_managed" messageCodeAttribute="Ruumiyksus" z="oz0MMnPt692zzKgtQS7DKCMNlQ8="/>
+        <field:select field="ruumiyksuseLiik" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_ruumiyksuseLiik" itemValue="ruumiyksuseLiikId" items="${ruumiyksuseliiks}" path="/ruumiyksuseliiks" z="HNmU07NWQfWr8j7Xa9s15Ur3F2k="/>
+        <field:simple field="voodikohts" id="c_ee_itcollege_group04_2011_entities_Ruumiyksus_voodikohts" messageCode="entity_reference_not_managed" messageCodeAttribute="Voodikoht" z="67dxr4iYJQ9F/VuamRbWnTNTl3o="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_group04_2011_entities_Ruumiyksus" render="${not empty dependencies}" z="Vwbf+G86LSLXqkW9VR4R0747LXI="/>
+</div>

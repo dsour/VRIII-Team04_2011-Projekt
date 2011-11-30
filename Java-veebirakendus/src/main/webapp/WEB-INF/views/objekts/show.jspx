@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_Objekt" object="${objekt}" path="/objekts" z="lrsxStN1I3e6OJz4E3e4kjPooeo=">
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_Objekt_avaja" object="${objekt}" z="HAXpce6iS4VeeOmIPJlGqqa7rBQ="/>
+        <field:display date="true" dateTimePattern="${objekt_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_Objekt_avatud" object="${objekt}" z="WN8kAJIlHK4mfNgkLYR7tHMsq1U="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_Objekt_kommentaar" object="${objekt}" z="4rblIshbCOSP+r47ZYdvdODWDwQ="/>
+        <field:display date="true" dateTimePattern="${objekt_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_Objekt_muudetud" object="${objekt}" z="2M298j7+EFD6xEPwDR2zemu6gjw="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_Objekt_muutja" object="${objekt}" z="ewUuQzeIltI8WbrdzwQ54Ejbpn8="/>
+        <field:display field="nimetus" id="s_ee_itcollege_group04_2011_entities_Objekt_nimetus" object="${objekt}" z="3a85oGsf+4Hgu+5i3v1g486S1zw="/>
+        <field:display date="true" dateTimePattern="${objekt_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_Objekt_suletud" object="${objekt}" z="uMY/5+F7H6RtJxF7wQ587LpMMx8="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_Objekt_sulgeja" object="${objekt}" z="pRPYPYyN6GWHTSgYQOVyEiATn3g="/>
+        <field:display field="objektiLiik" id="s_ee_itcollege_group04_2011_entities_Objekt_objektiLiik" object="${objekt}" z="7YeZqanM/8O8KDUENyGv2IxCIIQ="/>
+    </page:show>
+</div>

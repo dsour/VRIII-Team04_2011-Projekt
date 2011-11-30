@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus" idField="piiripunktiAlluvusId" modelAttribute="piiripunktiAlluvus" path="/piiripunktialluvuses" versionField="Version" z="gYL4JLdZwyFzyiujBxLp6iQrqRw=">
+        <field:input field="alates" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_alates" z="5kGefghcTK9u+S58G2rPnD49XK4="/>
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_avaja" z="fcMEPFu1xEr2MXEV2zc69NLjR9c="/>
+        <field:datetime dateTimePattern="${piiripunktiAlluvus_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_avatud" z="gDdz4CZdouYpyOPxxJCBqvZDDxE="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_kommentaar" z="3pb37TC5rU6c0Y75FoGZP9lMa4U="/>
+        <field:input field="kuni" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_kuni" z="MG/XP7NC9+uQcKsVTbx6zPmkFb8="/>
+        <field:datetime dateTimePattern="${piiripunktiAlluvus_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_muudetud" z="73C6V6atbqpVxxaLrP/rNAue6SA="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_muutja" z="OeqyB6LYtHoetHGu7mL1CyzYGxs="/>
+        <field:datetime dateTimePattern="${piiripunktiAlluvus_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_suletud" z="94jb89OS7LUZEGMUF7N+9yKfX7E="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_sulgeja" z="Pl79G6XG+yvx88d/345uStR3KCE="/>
+        <field:select field="piiripunkt" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_piiripunkt" itemValue="piiripunktId" items="${piiripunkts}" path="/piiripunkts" z="hU+xUL8kWSlqnGwDjan2ckRclko="/>
+        <field:select field="vaeosa" id="c_ee_itcollege_group04_2011_entities_PiiripunktiAlluvus_vaeosa" itemValue="vaeosaIdId" items="${vaeosas}" path="/vaeosas" z="cJlRyTyorPl2pns9xj8xnSrOK1M="/>
+    </form:update>
+</div>

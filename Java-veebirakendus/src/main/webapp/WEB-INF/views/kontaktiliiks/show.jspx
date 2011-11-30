@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_KontaktiLiik" object="${kontaktiliik}" path="/kontaktiliiks" z="QmPgeCGvamwu7x0x3j39T77n0kA=">
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_KontaktiLiik_avaja" object="${kontaktiliik}" z="0ziDzR8AmVVNwxEekTxenWtZm+s="/>
+        <field:display date="true" dateTimePattern="${kontaktiLiik_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_KontaktiLiik_avatud" object="${kontaktiliik}" z="2lM5yHZSJwKUk3Gacj4rQWdpmTM="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_KontaktiLiik_kommentaar" object="${kontaktiliik}" z="jfipfvVx/3MkP+2tNO8foxoiDA4="/>
+        <field:display date="true" dateTimePattern="${kontaktiLiik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_KontaktiLiik_muudetud" object="${kontaktiliik}" z="8RC64JcRYBwUngVIRcI4XmeZKas="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_KontaktiLiik_muutja" object="${kontaktiliik}" z="xC1wqGEIq9YFvn8Ek2kp86l5EvI="/>
+        <field:display field="nimetus" id="s_ee_itcollege_group04_2011_entities_KontaktiLiik_nimetus" object="${kontaktiliik}" z="AbUvoNd3MD6VJgjcQHyLAOP2EuM="/>
+        <field:display date="true" dateTimePattern="${kontaktiLiik_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_KontaktiLiik_suletud" object="${kontaktiliik}" z="ziRjcNCIk/afFV8o6CBDQ5J0H9s="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_KontaktiLiik_sulgeja" object="${kontaktiliik}" z="k4yrxq5d+j40UkRGHcdyyHQ3Z6o="/>
+        <field:display field="xmlKirjeldus" id="s_ee_itcollege_group04_2011_entities_KontaktiLiik_xmlKirjeldus" object="${kontaktiliik}" z="yVoYSOudoBevcpcWV5MtwLfZEpk="/>
+    </page:show>
+</div>

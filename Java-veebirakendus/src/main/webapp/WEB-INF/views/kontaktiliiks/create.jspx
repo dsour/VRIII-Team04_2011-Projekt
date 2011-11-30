@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_ee_itcollege_group04_2011_entities_KontaktiLiik" modelAttribute="kontaktiLiik" path="/kontaktiliiks" render="${empty dependencies}" z="zh+zBogq65EPPn7ZaeYumleM514=">
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_KontaktiLiik_avaja" z="aPkVjbIJrOCcKi8of3l25dC4fik="/>
+        <field:datetime dateTimePattern="${kontaktiLiik_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_KontaktiLiik_avatud" z="i539cYLe9vETyc6bUUI9MW3jCZc="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_KontaktiLiik_kommentaar" z="UJ/rxUWh5DttXTDT3UUyPafafMM="/>
+        <field:datetime dateTimePattern="${kontaktiLiik_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_KontaktiLiik_muudetud" z="tJ/5Yu81rvr7nMybGpbNIX1qWlE="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_KontaktiLiik_muutja" z="EEnWwUcU+RQDFXElMCFNps+tQH8="/>
+        <field:input field="nimetus" id="c_ee_itcollege_group04_2011_entities_KontaktiLiik_nimetus" z="jcHIOVaEbBKseeuwbp9jJO51er4="/>
+        <field:datetime dateTimePattern="${kontaktiLiik_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_KontaktiLiik_suletud" z="TgOj3pjlLm8xws2N+bhwVV1d0zY="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_KontaktiLiik_sulgeja" z="uZEFMM8pTpKA6ND127I7+e3oqwQ="/>
+        <field:input field="xmlKirjeldus" id="c_ee_itcollege_group04_2011_entities_KontaktiLiik_xmlKirjeldus" z="kZbdgl40JVy8o5p91oTKx39f1G8="/>
+        <field:simple field="piirivalvuriKontakts" id="c_ee_itcollege_group04_2011_entities_KontaktiLiik_piirivalvuriKontakts" messageCode="entity_reference_not_managed" messageCodeAttribute="Piirivalvuri Kontakt" z="mIgt4u5AybvRieYzYhEvgxfPmd8="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_group04_2011_entities_KontaktiLiik" render="${not empty dependencies}" z="vmkTKpFN7iDYEbrYRhjoP9Rr2Zk="/>
+</div>

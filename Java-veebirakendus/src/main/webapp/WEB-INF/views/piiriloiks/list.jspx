@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_group04_2011_entities_Piiriloik" items="${piiriloiks}" z="xKBQDWbGFp9ovjurmTOiplqIv7o=">
+        <table:table data="${piiriloiks}" id="l_ee_itcollege_group04_2011_entities_Piiriloik" path="/piiriloiks" typeIdFieldName="piiriloikId" z="qVPiJDhvM3Oh+h5dD3sy47ck4ZM=">
+            <table:column id="c_ee_itcollege_group04_2011_entities_Piiriloik_avaja" property="avaja" z="HvmUmL7clAq4KMFvmZ8KxnRGhEE="/>
+            <table:column date="true" dateTimePattern="${piiriloik_avatud_date_format}" id="c_ee_itcollege_group04_2011_entities_Piiriloik_avatud" property="avatud" z="i+hb9rkTi3JXkdE+IhOfh8y0Z0o="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Piiriloik_gpsKoordinaadid" property="gpsKoordinaadid" z="rV+MqP4XgguJ4qrc6C2x/S9zjhU="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Piiriloik_kommentaar" property="kommentaar" z="N2Op/GeO5bCm2kUlXoi91/7Ki0I="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Piiriloik_kood" property="kood" z="3+jI/TVbPuNO1mf78gyW/XGAOTM="/>
+            <table:column date="true" dateTimePattern="${piiriloik_muudetud_date_format}" id="c_ee_itcollege_group04_2011_entities_Piiriloik_muudetud" property="muudetud" z="gYAwFEFJYDJQ8Sscuefkq8zPieM="/>
+        </table:table>
+    </page:list>
+</div>

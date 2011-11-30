@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_group04_2011_entities_VahtkonnaLiige" idField="vahtkonnaLiigeId" modelAttribute="vahtkonnaLiige" path="/vahtkonnaliiges" versionField="Version" z="bCFzNdfaagP3rKXSSA7Lv7myJoE=">
+        <field:input field="alates" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_alates" z="mI52RrV9YgRMyCcRw35DIv9/S1g="/>
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_avaja" z="gcn/Sp1+AHoDOtHFH5MyK3lhWzc="/>
+        <field:datetime dateTimePattern="${vahtkonnaLiige_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_avatud" z="L9ctA8iTWvccLsMt/dITlMvS2ZM="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_kommentaar" z="fuDjoBdYlIXRVNH5vkelei1OSwc="/>
+        <field:input field="kuni" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_kuni" z="ne9EE04jVc7pz90kyfZ3uUnc4Wk="/>
+        <field:datetime dateTimePattern="${vahtkonnaLiige_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_muudetud" z="SkolQcYMNOJGblLI8QG5b4w7/uw="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_muutja" z="sIj5b1QvjO0r9qo+zXYppTLquMk="/>
+        <field:datetime dateTimePattern="${vahtkonnaLiige_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_suletud" z="UzwO3tszCY7qCAw0YJv5IOcs/tU="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_sulgeja" z="+HlD0H+hCzuTK+8V5Fbd1ZnUlPE="/>
+        <field:select field="piirivalvur" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_piirivalvur" itemValue="piirivalvurId" items="${piirivalvurs}" path="/piirivalvurs" z="wkXXG3T/7vIGrNCWZ7v2SUyYlpg="/>
+        <field:select field="vahtkond" id="c_ee_itcollege_group04_2011_entities_VahtkonnaLiige_vahtkond" itemValue="vahtkondId" items="${vahtkonds}" path="/vahtkonds" z="d2nU9BFfGkmISVEIWI/97ZpoweQ="/>
+    </form:update>
+</div>

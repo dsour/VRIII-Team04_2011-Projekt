@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_group04_2011_entities_AuastmeMuutumine" items="${auastmemuutumines}" z="KQVRWy8D1spDyp9UxQBsByPqRsw=">
+        <table:table data="${auastmemuutumines}" id="l_ee_itcollege_group04_2011_entities_AuastmeMuutumine" path="/auastmemuutumines" typeIdFieldName="auastmeMuutumineId" z="07dgUNi8WGvv6FWIIObCguWAKao=">
+            <table:column date="true" dateTimePattern="${auastmeMuutumine_alates_date_format}" id="c_ee_itcollege_group04_2011_entities_AuastmeMuutumine_alates" property="alates" z="kRqJYCYB6TDw66Q1i8EW6I8AAbI="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_AuastmeMuutumine_avaja" property="avaja" z="4aheiz16OKqBb3eYYHlmM8H/G64="/>
+            <table:column date="true" dateTimePattern="${auastmeMuutumine_avatud_date_format}" id="c_ee_itcollege_group04_2011_entities_AuastmeMuutumine_avatud" property="avatud" z="bqxypBLc3egYBUbR0gaEHHDDu8Q="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_AuastmeMuutumine_kommentaar" property="kommentaar" z="8Qri/cnekULW4NyuXA98h/R/EsA="/>
+            <table:column date="true" dateTimePattern="${auastmeMuutumine_kuni_date_format}" id="c_ee_itcollege_group04_2011_entities_AuastmeMuutumine_kuni" property="kuni" z="3Qt4+b9b1UO3a9LgNDrSdbaIJbk="/>
+            <table:column date="true" dateTimePattern="${auastmeMuutumine_muudetud_date_format}" id="c_ee_itcollege_group04_2011_entities_AuastmeMuutumine_muudetud" property="muudetud" z="gl/ONCs+ZsfaLj2dnTlj5JTXc3c="/>
+        </table:table>
+    </page:list>
+</div>

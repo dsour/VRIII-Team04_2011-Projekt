@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_ObjektiLiik" object="${objektiliik}" path="/objektiliiks" z="E6kFxUanOfnVPK7QxbbLSd0b8NE=">
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_ObjektiLiik_avaja" object="${objektiliik}" z="wrJ6m7mn5/uDXHk6BNB2F4Hk0+c="/>
+        <field:display date="true" dateTimePattern="${objektiLiik_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_ObjektiLiik_avatud" object="${objektiliik}" z="XY5f6WPzzUcDdtN9Hc5NK5fyyRE="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_ObjektiLiik_kommentaar" object="${objektiliik}" z="zX1nRuWyVpJwErXD9MRG1k+ML5E="/>
+        <field:display field="kood" id="s_ee_itcollege_group04_2011_entities_ObjektiLiik_kood" object="${objektiliik}" z="hGEd7E6rz1psnJDu6/jOBKKZMjg="/>
+        <field:display date="true" dateTimePattern="${objektiLiik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_ObjektiLiik_muudetud" object="${objektiliik}" z="lTKCXMFFvcsoTGytyAY0rVIBMdg="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_ObjektiLiik_muutja" object="${objektiliik}" z="pIRrfg0OSXw3yjFrvrjLDpqSxQA="/>
+        <field:display field="nimetus" id="s_ee_itcollege_group04_2011_entities_ObjektiLiik_nimetus" object="${objektiliik}" z="s1dM4I9Jbn8b0RhUC3ahSpGhHA8="/>
+        <field:display date="true" dateTimePattern="${objektiLiik_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_ObjektiLiik_suletud" object="${objektiliik}" z="cXYsbctq8kK/SJFPlAq4TxmsbTw="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_ObjektiLiik_sulgeja" object="${objektiliik}" z="Q0XnPqIKoJ5PKgx4O11fmvsgA6s="/>
+    </page:show>
+</div>

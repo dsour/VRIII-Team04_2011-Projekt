@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul" idField="vahtkondPiiriloiulId" modelAttribute="vahtkonndPiiriloigul" path="/vahtkonndpiiriloiguls" versionField="Version" z="0Le4B7MqlkCAGETVQac2e1BpSQ8=">
+        <field:datetime dateTimePattern="${vahtkonndPiiriloigul_alates_date_format}" field="alates" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_alates" z="zO9zLOlZI9xY/4JicBJMdB41n00="/>
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_avaja" z="f0XZDdnErS3n9DIz0zkgRQENU5c="/>
+        <field:datetime dateTimePattern="${vahtkonndPiiriloigul_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_avatud" z="+ThgzNtfKl8Gfr4gV9MV2kqTZ0s="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_kommentaar" z="deLOtYjjeB9xNnUtkqA7XiVlFcI="/>
+        <field:datetime dateTimePattern="${vahtkonndPiiriloigul_kuni_date_format}" field="kuni" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_kuni" z="rPRlnZ1ja/FX9gu+bbsry7d52pc="/>
+        <field:datetime dateTimePattern="${vahtkonndPiiriloigul_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_muudetud" z="+EfiwDo2W1m1PnrVn/agKGngE8Y="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_muutja" z="xioZ2f4dlkx5t/4Nqr5UbJl0PTo="/>
+        <field:datetime dateTimePattern="${vahtkonndPiiriloigul_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_suletud" z="NfWTFhOYveHpIfDYlsLVBQkjxYs="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_sulgeja" z="3wx9DRZfImalR69HpPV4eCGS9/A="/>
+        <field:select field="piiriloik" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_piiriloik" itemValue="piiriloikId" items="${piiriloiks}" path="/piiriloiks" z="elr2p9cVcH4QeEvm2sM+eyq3ops="/>
+        <field:select field="vahtkond" id="c_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_vahtkond" itemValue="vahtkondId" items="${vahtkonds}" path="/vahtkonds" z="sg264Xb1JXb3QmDLh2Rq8jnDbhI="/>
+    </form:update>
+</div>

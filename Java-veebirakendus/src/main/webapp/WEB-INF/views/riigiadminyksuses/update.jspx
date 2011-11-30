@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_group04_2011_entities_RiigiAdminYksus" idField="riigiAdminYksusId" modelAttribute="riigiAdminYksus" path="/riigiadminyksuses" versionField="Version" z="CoU6VJsgkswpZQmRzjyDK4RmrRM=">
+        <field:datetime dateTimePattern="${riigiAdminYksus_alates_date_format}" field="alates" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_alates" z="hsP22/kNzad5p7AwYQG1mbh014Q="/>
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_avaja" z="p7F8yooLw7n8qWVK7PC9PYTx4d8="/>
+        <field:datetime dateTimePattern="${riigiAdminYksus_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_avatud" z="x/9akGwpr/P4cNinY3oSO+C5Fxs="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_kommentaar" z="PUaLOlJi86U1z1p3YhUzhI1vVxQ="/>
+        <field:input field="kood" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_kood" z="VyqroIjYbAEiT2c7lFoPjUDYC/0="/>
+        <field:datetime dateTimePattern="${riigiAdminYksus_kuni_date_format}" field="kuni" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_kuni" z="sX2Vk1F9txAAef1ktotXscr3fTc="/>
+        <field:datetime dateTimePattern="${riigiAdminYksus_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_muudetud" z="Zz6Vvp4Ft4ghm9ZbEuTL8eEHmck="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_muutja" z="xKsIfKAlx5qgKu3opEcOfYIlzcU="/>
+        <field:input field="nimetus" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_nimetus" z="ghqdmG75zjVnI87L2H8pgfRd5WA="/>
+        <field:datetime dateTimePattern="${riigiAdminYksus_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_suletud" z="3nHdO1cYAGxibjHKQify7gkGfec="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_sulgeja" z="9YmURVutwFgG0rz7H2grYkopFAY="/>
+        <field:simple field="adminAlluvuses1" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_adminAlluvuses1" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" z="SiZaRuAwvwZs3HDU5IbBA15QfhM="/>
+        <field:simple field="adminAlluvuses2" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_adminAlluvuses2" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" z="mkWYlqGEf4MPmbzK7OUzoZKgWJs="/>
+        <field:input field="riigiAdminYksuseLiik" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_riigiAdminYksuseLiik" z="/0+m+n7SVFDCMQ5hJ91MUgRa0jg="/>
+        <field:simple field="ruumiyksuses" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_ruumiyksuses" messageCode="entity_reference_not_managed" messageCodeAttribute="Ruumiyksus" z="RNwgxhXXK3XZraBc/Rj/1bX9geI="/>
+        <field:simple field="vaeosas" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_vaeosas" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa" z="feMCxwLJg8/lTU/NpMip/xCrBfg="/>
+    </form:update>
+</div>

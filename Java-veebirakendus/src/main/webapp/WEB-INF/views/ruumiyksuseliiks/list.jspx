@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_group04_2011_entities_RuumiyksuseLiik" items="${ruumiyksuseliiks}" z="okoAZ5c4BuTUSvTNs3GIe2iCu8A=">
+        <table:table data="${ruumiyksuseliiks}" id="l_ee_itcollege_group04_2011_entities_RuumiyksuseLiik" path="/ruumiyksuseliiks" typeIdFieldName="ruumiyksuseLiikId" z="2beb+CeshXx2e9mngdvkxtyxX5g=">
+            <table:column id="c_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_avaja" property="avaja" z="+JFx4hS8rHlckrGV3rS9P70O15c="/>
+            <table:column date="true" dateTimePattern="${ruumiyksuseLiik_avatud_date_format}" id="c_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_avatud" property="avatud" z="yX92zlDhvMdOPoJb4EiJM/SO9xw="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_kommentaar" property="kommentaar" z="IQ4yjUOIy5Ms8QR0sCTDsyPwS4A="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_kood" property="kood" z="3YiDXgB9aStgm+QnixvGFke5vGo="/>
+            <table:column date="true" dateTimePattern="${ruumiyksuseLiik_muudetud_date_format}" id="c_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_muudetud" property="muudetud" z="K1c1fLekgh9FdBB9UtZsK3WViOY="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_RuumiyksuseLiik_muutja" property="muutja" z="vlG91ONkPzsTJCb0MB75R0CThEE="/>
+        </table:table>
+    </page:list>
+</div>

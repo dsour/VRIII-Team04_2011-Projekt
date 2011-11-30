@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_ee_itcollege_group04_2011_entities_Vahtkond" modelAttribute="vahtkond" path="/vahtkonds" render="${empty dependencies}" z="in6nLok9hq7vqrxJf/ii5z0Q+ro=">
+        <field:datetime dateTimePattern="${vahtkond_alates_date_format}" field="alates" id="c_ee_itcollege_group04_2011_entities_Vahtkond_alates" z="oDM3YRtjQ8Qdm1wXOAVHe6PXsAw="/>
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_Vahtkond_avaja" z="0cxiJteippXoLzF90h83sI5sXV8="/>
+        <field:datetime dateTimePattern="${vahtkond_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_Vahtkond_avatud" z="BnZBW6Jd/36cls/5bTEUDzphME4="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_Vahtkond_kommentaar" z="g9/FmWRvZ0xpulYIprLvj+ofODU="/>
+        <field:input field="kood" id="c_ee_itcollege_group04_2011_entities_Vahtkond_kood" z="IN3RbYJMNNq44zMZiaFc6hm/WLE="/>
+        <field:datetime dateTimePattern="${vahtkond_kuni_date_format}" field="kuni" id="c_ee_itcollege_group04_2011_entities_Vahtkond_kuni" z="l6DV+gXZLLXCyl/KR9xWHZPZzQo="/>
+        <field:datetime dateTimePattern="${vahtkond_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_Vahtkond_muudetud" z="vBEc2PsG92mH9UAHZfv6JnSGXAo="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_Vahtkond_muutja" z="NUhg6e6wMEvybAvxfBBhKDR5Edo="/>
+        <field:input field="nimetus" id="c_ee_itcollege_group04_2011_entities_Vahtkond_nimetus" z="eGpDPjJ38z0rbmLZ1psRQRV/HGs="/>
+        <field:datetime dateTimePattern="${vahtkond_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_Vahtkond_suletud" z="6QF9dva1DjT4pKrGma0Oa7TsGg8="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_Vahtkond_sulgeja" z="MRD4131qZmUhRO7wFUWpiXLk5Ug="/>
+        <field:select field="piiripunkt" id="c_ee_itcollege_group04_2011_entities_Vahtkond_piiripunkt" itemValue="piiripunktId" items="${piiripunkts}" path="/piiripunkts" z="WLqir/wv7/oQMqgYV/I+uyFpQrM="/>
+        <field:select field="vaeosa" id="c_ee_itcollege_group04_2011_entities_Vahtkond_vaeosa" itemValue="vaeosaIdId" items="${vaeosas}" path="/vaeosas" z="A21alTsdMpfDtlwF42oqg20+ycs="/>
+        <field:simple field="vahtkondIntsidendis" id="c_ee_itcollege_group04_2011_entities_Vahtkond_vahtkondIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkond Intsidendi" z="r0IZL9ZNVJukfkjjPCl6MEEkLh8="/>
+        <field:simple field="vahtkonnaLiiges" id="c_ee_itcollege_group04_2011_entities_Vahtkond_vahtkonnaLiiges" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkonna Liige" z="1gFjnMSoPZ+jOShN69dLURtj6Hc="/>
+        <field:simple field="vahtkonndPiiriloiguls" id="c_ee_itcollege_group04_2011_entities_Vahtkond_vahtkonndPiiriloiguls" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkonnd Piiriloigul" z="cYVZW7cefw9SjzufHzaQEo+tJ4Y="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_group04_2011_entities_Vahtkond" render="${not empty dependencies}" z="a8o71TNprXdkRGJLosDeiQ7/L+g="/>
+</div>

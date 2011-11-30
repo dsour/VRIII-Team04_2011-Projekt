@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_group04_2011_entities_Objekt" idField="objektId" modelAttribute="objekt" path="/objekts" versionField="Version" z="H0boS9xQhaXxSAsJIdzjeuWwPR0=">
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_Objekt_avaja" z="dJRdZdYPWhBpJw7qx1WcKjASrUc="/>
+        <field:datetime dateTimePattern="${objekt_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_Objekt_avatud" z="FR7EtNH0cX3iJ5kFVzXe32AGJiI="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_Objekt_kommentaar" z="XHxLvpwfff5Dn6Zu1L4m+K7c99A="/>
+        <field:datetime dateTimePattern="${objekt_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_Objekt_muudetud" z="PWWHKfuBYynHwtAP4aSGcf7ieGU="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_Objekt_muutja" z="5xEkpWGJK2AKgs9urMFfDXo5+sM="/>
+        <field:input field="nimetus" id="c_ee_itcollege_group04_2011_entities_Objekt_nimetus" z="XW44fY8S9V26SGbeRooOh0tGQfE="/>
+        <field:datetime dateTimePattern="${objekt_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_Objekt_suletud" z="3DP0NKjx3KILSsXOd1NepaKqmAE="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_Objekt_sulgeja" z="1bIV9fPhjoxmirP7mbA8LDMqVIA="/>
+        <field:select field="objektiLiik" id="c_ee_itcollege_group04_2011_entities_Objekt_objektiLiik" itemValue="objektLiikId" items="${objektiliiks}" path="/objektiliiks" z="eR2po5rJR6EJAsykU+jhn6aKnUg="/>
+        <field:simple field="objektIntsidendis" id="c_ee_itcollege_group04_2011_entities_Objekt_objektIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Objekt Intsidendi" z="9Cy4ZCGazXyVkAPMF8a4zJFFRX0="/>
+        <field:simple field="piiririkkujas" id="c_ee_itcollege_group04_2011_entities_Objekt_piiririkkujas" messageCode="entity_reference_not_managed" messageCodeAttribute="Piiririkkuja" z="paUAk1zJ8VCCm+AazL2TdC/TZOQ="/>
+    </form:update>
+</div>

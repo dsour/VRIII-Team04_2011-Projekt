@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_VaeosaAlluvus" object="${vaeosaalluvus}" path="/vaeosaalluvuses" z="aexrWgP9lIwkD1v3H6ulUGFlOlA=">
+        <field:display date="true" dateTimePattern="${vaeosaAlluvus_alates_date_format}" field="alates" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_alates" object="${vaeosaalluvus}" z="yrVooaBokvHU3P9iAThPGnAo668="/>
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_avaja" object="${vaeosaalluvus}" z="DFYmgh/Unw8jtlQyAJIWjE1laro="/>
+        <field:display date="true" dateTimePattern="${vaeosaAlluvus_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_avatud" object="${vaeosaalluvus}" z="yoFJFbSsWrB62vzLBKkbnVwKy+Y="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_kommentaar" object="${vaeosaalluvus}" z="2Qivtojik1VrgFRitUEYorskZNA="/>
+        <field:display date="true" dateTimePattern="${vaeosaAlluvus_kuni_date_format}" field="kuni" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_kuni" object="${vaeosaalluvus}" z="g2qX0unLoBZLe57wha+piN+zOnM="/>
+        <field:display date="true" dateTimePattern="${vaeosaAlluvus_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_muudetud" object="${vaeosaalluvus}" z="sGaX4cfzMjGRPAFYSfJ/Kyp32iM="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_muutja" object="${vaeosaalluvus}" z="tdOcTuvNRT34ONmbIeDYqs/QMcE="/>
+        <field:display date="true" dateTimePattern="${vaeosaAlluvus_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_suletud" object="${vaeosaalluvus}" z="3LzMPWiN22LR9oZha+pfZZMzw74="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_sulgeja" object="${vaeosaalluvus}" z="O/ktWpDYnkhagkmzfrd9ueoFfGM="/>
+        <field:display field="vaeosa1" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_vaeosa1" object="${vaeosaalluvus}" z="53q8WkITx0ltudAg1kFOXPLc+oQ="/>
+        <field:display field="vaeosa2" id="s_ee_itcollege_group04_2011_entities_VaeosaAlluvus_vaeosa2" object="${vaeosaalluvus}" z="Qr+jYW1Z2ifQVLVvUcFNDE9QCo4="/>
+    </page:show>
+</div>

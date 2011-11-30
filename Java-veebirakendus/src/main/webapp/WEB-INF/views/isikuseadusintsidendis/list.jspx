@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_ee_itcollege_group04_2011_entities_IsikuSeadusIntsidendi" items="${isikuseadusintsidendis}" z="r6wmVqb6ZKwlQCVtaw0JZwk4JcA=">
+        <table:table data="${isikuseadusintsidendis}" id="l_ee_itcollege_group04_2011_entities_IsikuSeadusIntsidendi" path="/isikuseadusintsidendis" typeIdFieldName="isikuSeadusIntsidendisId" z="idppYWCm52HzAPmnM0iw6ptLhWM=">
+            <table:column date="true" dateTimePattern="${isikuSeadusIntsidendi_alates_date_format}" id="c_ee_itcollege_group04_2011_entities_IsikuSeadusIntsidendi_alates" property="alates" z="Lk+CIHmjDJl1bDuCudAzbYdy0UY="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_IsikuSeadusIntsidendi_avaja" property="avaja" z="Y2z1IrR7p/6XrnO4UPYCi8pvNy0="/>
+            <table:column date="true" dateTimePattern="${isikuSeadusIntsidendi_avatud_date_format}" id="c_ee_itcollege_group04_2011_entities_IsikuSeadusIntsidendi_avatud" property="avatud" z="OPsGg7DcQsCNl3g4eXwWVGR+PGY="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_IsikuSeadusIntsidendi_kirjeldus" property="kirjeldus" z="SvF1lLh0O3Qxh/z3I9oBHrGzG40="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_IsikuSeadusIntsidendi_kommentaar" property="kommentaar" z="iMnQJTwLEqN83JjLE46aXAbtFb4="/>
+            <table:column date="true" dateTimePattern="${isikuSeadusIntsidendi_kuni_date_format}" id="c_ee_itcollege_group04_2011_entities_IsikuSeadusIntsidendi_kuni" property="kuni" z="8No3fI0m3Rqc3YR5lzkf3qikowk="/>
+        </table:table>
+    </page:list>
+</div>

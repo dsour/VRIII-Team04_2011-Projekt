@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_SuguluseRolliLiik" object="${suguluserolliliik}" path="/suguluserolliliiks" z="Q8TbxRy19OwzrDsuy50GgZGOI6Y=">
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_SuguluseRolliLiik_avaja" object="${suguluserolliliik}" z="h1usyNS4+Tue/x5MV7ZOJt6p+AQ="/>
+        <field:display date="true" dateTimePattern="${suguluseRolliLiik_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_SuguluseRolliLiik_avatud" object="${suguluserolliliik}" z="unY17SSSJMJTZvDqUXucpdkHq3M="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_SuguluseRolliLiik_kommentaar" object="${suguluserolliliik}" z="dJx3zkxXRGHGLN79EcofTzW76bI="/>
+        <field:display date="true" dateTimePattern="${suguluseRolliLiik_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_SuguluseRolliLiik_muudetud" object="${suguluserolliliik}" z="pByMbJs4D/dMEDLh8gfbJIBuzgo="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_SuguluseRolliLiik_muutja" object="${suguluserolliliik}" z="qjZoEw2FWwT8Ld/U2kU/qrTr/vg="/>
+        <field:display field="nimetus" id="s_ee_itcollege_group04_2011_entities_SuguluseRolliLiik_nimetus" object="${suguluserolliliik}" z="j9RkkUOCyqi2MwS5VKTL6VPPuMU="/>
+        <field:display field="sugulaneVoiMitte" id="s_ee_itcollege_group04_2011_entities_SuguluseRolliLiik_sugulaneVoiMitte" object="${suguluserolliliik}" z="Xet+stTXKvDqzPAeavN8+1iTNsE="/>
+        <field:display date="true" dateTimePattern="${suguluseRolliLiik_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_SuguluseRolliLiik_suletud" object="${suguluserolliliik}" z="pdQTXVfhSdJaBsQ/Nm3ILG2I45o="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_SuguluseRolliLiik_sulgeja" object="${suguluserolliliik}" z="W/dQQCoLU1Ox9eCIQ4rBxRZLuw0="/>
+    </page:show>
+</div>

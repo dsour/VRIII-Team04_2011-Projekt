@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_ee_itcollege_group04_2011_entities_Piiririkkuja" modelAttribute="piiririkkuja" path="/piiririkkujas" render="${empty dependencies}" z="v6fFUHnRU8tyZ1pLKenGLTElD1c=">
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_avaja" z="jt9KSQ0ygfhqU/RTIMRWFP0Lmfk="/>
+        <field:datetime dateTimePattern="${piiririkkuja_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_avatud" z="hNf+Z9JdfEJJhdJeAIQFSJFBdxQ="/>
+        <field:input field="eesnimi" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_eesnimi" z="ktulG8/HSY+rJgEoSZoA2zXOIAg="/>
+        <field:input field="isikukood" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_isikukood" z="ZmkSXWu54GaV1vCaCrts6vwdrvs="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_kommentaar" z="f+t7xWOcxDiZA2EphkWhRRpmp4c="/>
+        <field:datetime dateTimePattern="${piiririkkuja_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_muudetud" z="1JifT4TUR88+oFoB1HEIRg/w+s8="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_muutja" z="m3xtgfBqT2oy8pA5szEXv3VR/Go="/>
+        <field:input field="perekNimi" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_perekNimi" z="YehB0AIfKVv/aBxdtr+Skw976tA="/>
+        <field:input field="sugu" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_sugu" z="XF9E5oFgo6RPqEMJJKUnUPQiqsU="/>
+        <field:datetime dateTimePattern="${piiririkkuja_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_suletud" z="BJfZzvxYEpvnYseZEuVcDMJezrk="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_sulgeja" z="y/EwAJ5P0hlk1dg2hY8KhH2p2w4="/>
+        <field:datetime dateTimePattern="${piiririkkuja_synniaeg_date_format}" field="synniaeg" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_synniaeg" z="a8XPMIyUR/8sfa29pUEYakP++xc="/>
+        <field:simple field="isikIntsidendis" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_isikIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Isik Intsidendi" z="cyGcjAqKN+b85rsti52hvLb7Ou0="/>
+        <field:simple field="kodakondsuses" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_kodakondsuses" messageCode="entity_reference_not_managed" messageCodeAttribute="Kodakondsus" z="5NHvi5o8p6gPuHGVLOqnu0gqhGA="/>
+        <field:select field="objekt" id="c_ee_itcollege_group04_2011_entities_Piiririkkuja_objekt" itemValue="objektId" items="${objekts}" path="/objekts" z="Q6v7Lf6DOIBwPZ9d5T09GxYF5dY="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_group04_2011_entities_Piiririkkuja" render="${not empty dependencies}" z="/Gm4amxY2R1gEF0jpz0xBM9CyG4="/>
+</div>

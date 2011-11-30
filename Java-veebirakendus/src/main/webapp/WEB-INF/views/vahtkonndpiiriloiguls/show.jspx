@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul" object="${vahtkonndpiiriloigul}" path="/vahtkonndpiiriloiguls" z="7KM+acNrTDV2z9skqabvGZdxW68=">
+        <field:display date="true" dateTimePattern="${vahtkonndPiiriloigul_alates_date_format}" field="alates" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_alates" object="${vahtkonndpiiriloigul}" z="0YJIRAK6e4Aq5nmzeMVOrKlzR6k="/>
+        <field:display field="avaja" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_avaja" object="${vahtkonndpiiriloigul}" z="7Myld/04sXzhPkGjhFPi48s7H0k="/>
+        <field:display date="true" dateTimePattern="${vahtkonndPiiriloigul_avatud_date_format}" field="avatud" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_avatud" object="${vahtkonndpiiriloigul}" z="9MRJuopnNHSHOGLAXV7kx/blSj4="/>
+        <field:display field="kommentaar" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_kommentaar" object="${vahtkonndpiiriloigul}" z="95pvLh/zQVZfnp4zviToPWL2AOI="/>
+        <field:display date="true" dateTimePattern="${vahtkonndPiiriloigul_kuni_date_format}" field="kuni" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_kuni" object="${vahtkonndpiiriloigul}" z="MgrRe65SgRBhZPXqFcHUqv8X7ZA="/>
+        <field:display date="true" dateTimePattern="${vahtkonndPiiriloigul_muudetud_date_format}" field="muudetud" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_muudetud" object="${vahtkonndpiiriloigul}" z="dCBxfkwBwZ5ee6ZEwSJyzgJBe+g="/>
+        <field:display field="muutja" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_muutja" object="${vahtkonndpiiriloigul}" z="kzQPweql8p1Ka5xrVpKMsd1sI0Y="/>
+        <field:display date="true" dateTimePattern="${vahtkonndPiiriloigul_suletud_date_format}" field="suletud" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_suletud" object="${vahtkonndpiiriloigul}" z="ZWHli87NLjSjJF/H2e9Il/iQY0A="/>
+        <field:display field="sulgeja" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_sulgeja" object="${vahtkonndpiiriloigul}" z="1kjGCkx3WdAm/PirwxZnrEdtG70="/>
+        <field:display field="piiriloik" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_piiriloik" object="${vahtkonndpiiriloigul}" z="hkvavDkuK2XoFjjC8kCFXVV6SKI="/>
+        <field:display field="vahtkond" id="s_ee_itcollege_group04_2011_entities_VahtkonndPiiriloigul_vahtkond" object="${vahtkonndpiiriloigul}" z="PKPSCVzBKEKEzYm2fFv3rizd1FI="/>
+    </page:show>
+</div>

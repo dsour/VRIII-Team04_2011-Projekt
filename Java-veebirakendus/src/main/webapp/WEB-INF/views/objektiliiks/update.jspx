@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_ee_itcollege_group04_2011_entities_ObjektiLiik" idField="objektLiikId" modelAttribute="objektiLiik" path="/objektiliiks" versionField="Version" z="RAsfCZpoQ29vSWr9YWFXIFk60Pw=">
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_ObjektiLiik_avaja" z="y9CvbIUcEajmBK9uFGmqY3YmH6g="/>
+        <field:datetime dateTimePattern="${objektiLiik_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_ObjektiLiik_avatud" z="FtoBON58bXi2ZaveEmxLZZ40wjo="/>
+        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_ObjektiLiik_kommentaar" z="Hg42Ta7ygY2YxTm8WZU4zdbKRUw="/>
+        <field:input field="kood" id="c_ee_itcollege_group04_2011_entities_ObjektiLiik_kood" z="uMQDAxSsDHqbau86rF+1bM0BuEA="/>
+        <field:datetime dateTimePattern="${objektiLiik_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_ObjektiLiik_muudetud" z="Yq1vI6vbrR8EiGxH3u1/l8e5hrY="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_ObjektiLiik_muutja" z="T2SOaB750+X/RnYvP1Pu3+4dCFs="/>
+        <field:input field="nimetus" id="c_ee_itcollege_group04_2011_entities_ObjektiLiik_nimetus" z="3dYFFsvO1nIYb3Pr7JJZpGnPUcU="/>
+        <field:datetime dateTimePattern="${objektiLiik_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_ObjektiLiik_suletud" z="6nhHcOI/NX9RrGOxhyFYGO42VM4="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_ObjektiLiik_sulgeja" z="kX7UOkuwxiZVMpJemuh3wDfugPQ="/>
+        <field:simple field="objekts" id="c_ee_itcollege_group04_2011_entities_ObjektiLiik_objekts" messageCode="entity_reference_not_managed" messageCodeAttribute="Objekt" z="6mFWa1bNSt8Hkzmd5Ppg5OeNAbw="/>
+    </form:update>
+</div>
