@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.Voodikoht;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect Voodikoht_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM Voodikoht o", Voodikoht.class).getResultList();
     }
     
-    public static Voodikoht Voodikoht.findVoodikoht(int voodikohtId) {
+    public static Voodikoht Voodikoht.findVoodikoht(Long voodikohtId) {
+        if (voodikohtId == null) return null;
         return entityManager().find(Voodikoht.class, voodikohtId);
     }
     

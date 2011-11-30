@@ -32,7 +32,7 @@ public class Vahtkond implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="VAHTKOND_ID")
-	private int vahtkondId;
+	private Long vahtkondId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -86,11 +86,11 @@ public class Vahtkond implements Serializable {
     public Vahtkond() {
     }
 
-	public int getVahtkondId() {
+	public Long getVahtkondId() {
 		return this.vahtkondId;
 	}
 
-	public void setVahtkondId(int vahtkondId) {
+	public void setVahtkondId(Long vahtkondId) {
 		this.vahtkondId = vahtkondId;
 	}
 

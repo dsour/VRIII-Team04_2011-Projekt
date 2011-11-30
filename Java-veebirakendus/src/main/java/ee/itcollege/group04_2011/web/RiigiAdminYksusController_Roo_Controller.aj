@@ -9,6 +9,7 @@ import ee.itcollege.group04_2011.entities.Ruumiyksus;
 import ee.itcollege.group04_2011.entities.Vaeosa;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ privileged aspect RiigiAdminYksusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{riigiAdminYksusId}", method = RequestMethod.GET)
-    public String RiigiAdminYksusController.show(@PathVariable("riigiAdminYksusId") int riigiAdminYksusId, Model uiModel) {
+    public String RiigiAdminYksusController.show(@PathVariable("riigiAdminYksusId") Long riigiAdminYksusId, Model uiModel) {
         uiModel.addAttribute("riigiadminyksus", RiigiAdminYksus.findRiigiAdminYksus(riigiAdminYksusId));
         uiModel.addAttribute("itemId", riigiAdminYksusId);
         return "riigiadminyksuses/show";
@@ -74,13 +75,13 @@ privileged aspect RiigiAdminYksusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{riigiAdminYksusId}", params = "form", method = RequestMethod.GET)
-    public String RiigiAdminYksusController.updateForm(@PathVariable("riigiAdminYksusId") int riigiAdminYksusId, Model uiModel) {
+    public String RiigiAdminYksusController.updateForm(@PathVariable("riigiAdminYksusId") Long riigiAdminYksusId, Model uiModel) {
         uiModel.addAttribute("riigiAdminYksus", RiigiAdminYksus.findRiigiAdminYksus(riigiAdminYksusId));
         return "riigiadminyksuses/update";
     }
     
     @RequestMapping(value = "/{riigiAdminYksusId}", method = RequestMethod.DELETE)
-    public String RiigiAdminYksusController.delete(@PathVariable("riigiAdminYksusId") int riigiAdminYksusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String RiigiAdminYksusController.delete(@PathVariable("riigiAdminYksusId") Long riigiAdminYksusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         RiigiAdminYksus.findRiigiAdminYksus(riigiAdminYksusId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

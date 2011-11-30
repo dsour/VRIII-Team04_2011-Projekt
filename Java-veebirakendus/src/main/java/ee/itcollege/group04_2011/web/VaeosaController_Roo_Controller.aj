@@ -13,6 +13,7 @@ import ee.itcollege.group04_2011.entities.VaeosaAlluvus;
 import ee.itcollege.group04_2011.entities.Vahtkond;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -47,7 +48,7 @@ privileged aspect VaeosaController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vaeosaIdId}", method = RequestMethod.GET)
-    public String VaeosaController.show(@PathVariable("vaeosaIdId") int vaeosaIdId, Model uiModel) {
+    public String VaeosaController.show(@PathVariable("vaeosaIdId") Long vaeosaIdId, Model uiModel) {
         uiModel.addAttribute("vaeosa", Vaeosa.findVaeosa(vaeosaIdId));
         uiModel.addAttribute("itemId", vaeosaIdId);
         return "vaeosas/show";
@@ -78,13 +79,13 @@ privileged aspect VaeosaController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vaeosaIdId}", params = "form", method = RequestMethod.GET)
-    public String VaeosaController.updateForm(@PathVariable("vaeosaIdId") int vaeosaIdId, Model uiModel) {
+    public String VaeosaController.updateForm(@PathVariable("vaeosaIdId") Long vaeosaIdId, Model uiModel) {
         uiModel.addAttribute("vaeosa", Vaeosa.findVaeosa(vaeosaIdId));
         return "vaeosas/update";
     }
     
     @RequestMapping(value = "/{vaeosaIdId}", method = RequestMethod.DELETE)
-    public String VaeosaController.delete(@PathVariable("vaeosaIdId") int vaeosaIdId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String VaeosaController.delete(@PathVariable("vaeosaIdId") Long vaeosaIdId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Vaeosa.findVaeosa(vaeosaIdId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.Riik;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect Riik_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM Riik o", Riik.class).getResultList();
     }
     
-    public static Riik Riik.findRiik(int riikId) {
+    public static Riik Riik.findRiik(Long riikId) {
+        if (riikId == null) return null;
         return entityManager().find(Riik.class, riikId);
     }
     

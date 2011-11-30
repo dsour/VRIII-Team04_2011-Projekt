@@ -32,7 +32,7 @@ public class VahtkonnaLiige implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="VAHTKONNA_LIIGE_ID")
-	private int vahtkonnaLiigeId;
+	private Long vahtkonnaLiigeId;
 
 	private String alates;
 
@@ -68,11 +68,11 @@ public class VahtkonnaLiige implements Serializable {
     public VahtkonnaLiige() {
     }
 
-	public int getVahtkonnaLiigeId() {
+	public Long getVahtkonnaLiigeId() {
 		return this.vahtkonnaLiigeId;
 	}
 
-	public void setVahtkonnaLiigeId(int vahtkonnaLiigeId) {
+	public void setVahtkonnaLiigeId(Long vahtkonnaLiigeId) {
 		this.vahtkonnaLiigeId = vahtkonnaLiigeId;
 	}
 

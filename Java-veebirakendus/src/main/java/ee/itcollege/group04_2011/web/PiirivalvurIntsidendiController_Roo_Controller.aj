@@ -10,6 +10,7 @@ import ee.itcollege.group04_2011.entities.PiirivalvuriSeadusIntsidendi;
 import ee.itcollege.group04_2011.entities.VahtkondIntsidendi;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -44,7 +45,7 @@ privileged aspect PiirivalvurIntsidendiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvurIntsidendisId}", method = RequestMethod.GET)
-    public String PiirivalvurIntsidendiController.show(@PathVariable("piirivalvurIntsidendisId") int piirivalvurIntsidendisId, Model uiModel) {
+    public String PiirivalvurIntsidendiController.show(@PathVariable("piirivalvurIntsidendisId") Long piirivalvurIntsidendisId, Model uiModel) {
         uiModel.addAttribute("piirivalvurintsidendi", PiirivalvurIntsidendi.findPiirivalvurIntsidendi(piirivalvurIntsidendisId));
         uiModel.addAttribute("itemId", piirivalvurIntsidendisId);
         return "piirivalvurintsidendis/show";
@@ -75,13 +76,13 @@ privileged aspect PiirivalvurIntsidendiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvurIntsidendisId}", params = "form", method = RequestMethod.GET)
-    public String PiirivalvurIntsidendiController.updateForm(@PathVariable("piirivalvurIntsidendisId") int piirivalvurIntsidendisId, Model uiModel) {
+    public String PiirivalvurIntsidendiController.updateForm(@PathVariable("piirivalvurIntsidendisId") Long piirivalvurIntsidendisId, Model uiModel) {
         uiModel.addAttribute("piirivalvurIntsidendi", PiirivalvurIntsidendi.findPiirivalvurIntsidendi(piirivalvurIntsidendisId));
         return "piirivalvurintsidendis/update";
     }
     
     @RequestMapping(value = "/{piirivalvurIntsidendisId}", method = RequestMethod.DELETE)
-    public String PiirivalvurIntsidendiController.delete(@PathVariable("piirivalvurIntsidendisId") int piirivalvurIntsidendisId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiirivalvurIntsidendiController.delete(@PathVariable("piirivalvurIntsidendisId") Long piirivalvurIntsidendisId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         PiirivalvurIntsidendi.findPiirivalvurIntsidendi(piirivalvurIntsidendisId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

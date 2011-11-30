@@ -32,7 +32,7 @@ public class Vaeosa implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="VAEOSA_ID_ID")
-	private int vaeosaIdId;
+	private Long vaeosaIdId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -97,11 +97,11 @@ public class Vaeosa implements Serializable {
     public Vaeosa() {
     }
 
-	public int getVaeosaIdId() {
+	public Long getVaeosaIdId() {
 		return this.vaeosaIdId;
 	}
 
-	public void setVaeosaIdId(int vaeosaIdId) {
+	public void setVaeosaIdId(Long vaeosaIdId) {
 		this.vaeosaIdId = vaeosaIdId;
 	}
 

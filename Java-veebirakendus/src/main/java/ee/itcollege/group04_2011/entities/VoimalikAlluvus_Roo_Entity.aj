@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.VoimalikAlluvus;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect VoimalikAlluvus_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM VoimalikAlluvus o", VoimalikAlluvus.class).getResultList();
     }
     
-    public static VoimalikAlluvus VoimalikAlluvus.findVoimalikAlluvus(int voimalikAlluvusId) {
+    public static VoimalikAlluvus VoimalikAlluvus.findVoimalikAlluvus(Long voimalikAlluvusId) {
+        if (voimalikAlluvusId == null) return null;
         return entityManager().find(VoimalikAlluvus.class, voimalikAlluvusId);
     }
     

@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.SeotudKontaktisik;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect SeotudKontaktisik_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM SeotudKontaktisik o", SeotudKontaktisik.class).getResultList();
     }
     
-    public static SeotudKontaktisik SeotudKontaktisik.findSeotudKontaktisik(int piirivalvuriKontaktId) {
+    public static SeotudKontaktisik SeotudKontaktisik.findSeotudKontaktisik(Long piirivalvuriKontaktId) {
+        if (piirivalvuriKontaktId == null) return null;
         return entityManager().find(SeotudKontaktisik.class, piirivalvuriKontaktId);
     }
     

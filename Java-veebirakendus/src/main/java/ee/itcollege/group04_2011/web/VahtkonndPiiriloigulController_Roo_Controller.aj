@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.Vahtkond;
 import ee.itcollege.group04_2011.entities.VahtkonndPiiriloigul;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect VahtkonndPiiriloigulController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vahtkondPiiriloiulId}", method = RequestMethod.GET)
-    public String VahtkonndPiiriloigulController.show(@PathVariable("vahtkondPiiriloiulId") int vahtkondPiiriloiulId, Model uiModel) {
+    public String VahtkonndPiiriloigulController.show(@PathVariable("vahtkondPiiriloiulId") Long vahtkondPiiriloiulId, Model uiModel) {
         uiModel.addAttribute("vahtkonndpiiriloigul", VahtkonndPiiriloigul.findVahtkonndPiiriloigul(vahtkondPiiriloiulId));
         uiModel.addAttribute("itemId", vahtkondPiiriloiulId);
         return "vahtkonndpiiriloiguls/show";
@@ -73,13 +74,13 @@ privileged aspect VahtkonndPiiriloigulController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vahtkondPiiriloiulId}", params = "form", method = RequestMethod.GET)
-    public String VahtkonndPiiriloigulController.updateForm(@PathVariable("vahtkondPiiriloiulId") int vahtkondPiiriloiulId, Model uiModel) {
+    public String VahtkonndPiiriloigulController.updateForm(@PathVariable("vahtkondPiiriloiulId") Long vahtkondPiiriloiulId, Model uiModel) {
         uiModel.addAttribute("vahtkonndPiiriloigul", VahtkonndPiiriloigul.findVahtkonndPiiriloigul(vahtkondPiiriloiulId));
         return "vahtkonndpiiriloiguls/update";
     }
     
     @RequestMapping(value = "/{vahtkondPiiriloiulId}", method = RequestMethod.DELETE)
-    public String VahtkonndPiiriloigulController.delete(@PathVariable("vahtkondPiiriloiulId") int vahtkondPiiriloiulId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String VahtkonndPiiriloigulController.delete(@PathVariable("vahtkondPiiriloiulId") Long vahtkondPiiriloiulId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         VahtkonndPiiriloigul.findVahtkonndPiiriloigul(vahtkondPiiriloiulId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

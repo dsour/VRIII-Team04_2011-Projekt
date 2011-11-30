@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.PiirivalvurVaeosa;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect PiirivalvurVaeosa_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM PiirivalvurVaeosa o", PiirivalvurVaeosa.class).getResultList();
     }
     
-    public static PiirivalvurVaeosa PiirivalvurVaeosa.findPiirivalvurVaeosa(int piirivalvurVaeosasId) {
+    public static PiirivalvurVaeosa PiirivalvurVaeosa.findPiirivalvurVaeosa(Long piirivalvurVaeosasId) {
+        if (piirivalvurVaeosasId == null) return null;
         return entityManager().find(PiirivalvurVaeosa.class, piirivalvurVaeosasId);
     }
     

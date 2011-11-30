@@ -33,7 +33,7 @@ public class PiirivalvurPiiripunkti implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PIIRIVALVUR_PIIRIPUNKTIS_ID")
-	private int piirivalvurPiiripunktisId;
+	private Long piirivalvurPiiripunktisId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -73,11 +73,11 @@ public class PiirivalvurPiiripunkti implements Serializable {
     public PiirivalvurPiiripunkti() {
     }
 
-	public int getPiirivalvurPiiripunktisId() {
+	public Long getPiirivalvurPiiripunktisId() {
 		return this.piirivalvurPiiripunktisId;
 	}
 
-	public void setPiirivalvurPiiripunktisId(int piirivalvurPiiripunktisId) {
+	public void setPiirivalvurPiiripunktisId(Long piirivalvurPiiripunktisId) {
 		this.piirivalvurPiiripunktisId = piirivalvurPiiripunktisId;
 	}
 

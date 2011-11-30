@@ -34,7 +34,7 @@ public class PiirivalvurIntsidendi implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PIIRIVALVUR_INTSIDENDIS_ID")
-	private int piirivalvurIntsidendisId;
+	private Long piirivalvurIntsidendisId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -83,11 +83,11 @@ public class PiirivalvurIntsidendi implements Serializable {
     public PiirivalvurIntsidendi() {
     }
 
-	public int getPiirivalvurIntsidendisId() {
+	public Long getPiirivalvurIntsidendisId() {
 		return this.piirivalvurIntsidendisId;
 	}
 
-	public void setPiirivalvurIntsidendisId(int piirivalvurIntsidendisId) {
+	public void setPiirivalvurIntsidendisId(Long piirivalvurIntsidendisId) {
 		this.piirivalvurIntsidendisId = piirivalvurIntsidendisId;
 	}
 

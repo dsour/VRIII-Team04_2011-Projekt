@@ -7,6 +7,7 @@ import ee.itcollege.group04_2011.entities.SeotudKontaktisik;
 import ee.itcollege.group04_2011.entities.SuguluseRolliLiik;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +42,7 @@ privileged aspect SuguluseRolliLiikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{suguluseRolliLiikId}", method = RequestMethod.GET)
-    public String SuguluseRolliLiikController.show(@PathVariable("suguluseRolliLiikId") int suguluseRolliLiikId, Model uiModel) {
+    public String SuguluseRolliLiikController.show(@PathVariable("suguluseRolliLiikId") Long suguluseRolliLiikId, Model uiModel) {
         uiModel.addAttribute("suguluserolliliik", SuguluseRolliLiik.findSuguluseRolliLiik(suguluseRolliLiikId));
         uiModel.addAttribute("itemId", suguluseRolliLiikId);
         return "suguluserolliliiks/show";
@@ -72,13 +73,13 @@ privileged aspect SuguluseRolliLiikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{suguluseRolliLiikId}", params = "form", method = RequestMethod.GET)
-    public String SuguluseRolliLiikController.updateForm(@PathVariable("suguluseRolliLiikId") int suguluseRolliLiikId, Model uiModel) {
+    public String SuguluseRolliLiikController.updateForm(@PathVariable("suguluseRolliLiikId") Long suguluseRolliLiikId, Model uiModel) {
         uiModel.addAttribute("suguluseRolliLiik", SuguluseRolliLiik.findSuguluseRolliLiik(suguluseRolliLiikId));
         return "suguluserolliliiks/update";
     }
     
     @RequestMapping(value = "/{suguluseRolliLiikId}", method = RequestMethod.DELETE)
-    public String SuguluseRolliLiikController.delete(@PathVariable("suguluseRolliLiikId") int suguluseRolliLiikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String SuguluseRolliLiikController.delete(@PathVariable("suguluseRolliLiikId") Long suguluseRolliLiikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         SuguluseRolliLiik.findSuguluseRolliLiik(suguluseRolliLiikId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

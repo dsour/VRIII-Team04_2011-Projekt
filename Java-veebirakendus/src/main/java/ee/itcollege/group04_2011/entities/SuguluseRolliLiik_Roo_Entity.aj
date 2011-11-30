@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.SuguluseRolliLiik;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect SuguluseRolliLiik_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM SuguluseRolliLiik o", SuguluseRolliLiik.class).getResultList();
     }
     
-    public static SuguluseRolliLiik SuguluseRolliLiik.findSuguluseRolliLiik(int suguluseRolliLiikId) {
+    public static SuguluseRolliLiik SuguluseRolliLiik.findSuguluseRolliLiik(Long suguluseRolliLiikId) {
+        if (suguluseRolliLiikId == null) return null;
         return entityManager().find(SuguluseRolliLiik.class, suguluseRolliLiikId);
     }
     

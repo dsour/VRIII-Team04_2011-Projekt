@@ -32,7 +32,7 @@ public class SeotudKontaktisik implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PIIRIVALVURI_KONTAKT_ID")
-	private int piirivalvuriKontaktId;
+	private Long piirivalvuriKontaktId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -70,11 +70,11 @@ public class SeotudKontaktisik implements Serializable {
     public SeotudKontaktisik() {
     }
 
-	public int getPiirivalvuriKontaktId() {
+	public Long getPiirivalvuriKontaktId() {
 		return this.piirivalvuriKontaktId;
 	}
 
-	public void setPiirivalvuriKontaktId(int piirivalvuriKontaktId) {
+	public void setPiirivalvuriKontaktId(Long piirivalvuriKontaktId) {
 		this.piirivalvuriKontaktId = piirivalvuriKontaktId;
 	}
 

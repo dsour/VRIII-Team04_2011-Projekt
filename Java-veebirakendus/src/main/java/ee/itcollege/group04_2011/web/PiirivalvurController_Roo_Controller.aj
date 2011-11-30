@@ -14,6 +14,7 @@ import ee.itcollege.group04_2011.entities.SeotudKontaktisik;
 import ee.itcollege.group04_2011.entities.VahtkonnaLiige;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -48,7 +49,7 @@ privileged aspect PiirivalvurController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvurId}", method = RequestMethod.GET)
-    public String PiirivalvurController.show(@PathVariable("piirivalvurId") int piirivalvurId, Model uiModel) {
+    public String PiirivalvurController.show(@PathVariable("piirivalvurId") Long piirivalvurId, Model uiModel) {
         uiModel.addAttribute("piirivalvur", Piirivalvur.findPiirivalvur(piirivalvurId));
         uiModel.addAttribute("itemId", piirivalvurId);
         return "piirivalvurs/show";
@@ -79,13 +80,13 @@ privileged aspect PiirivalvurController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvurId}", params = "form", method = RequestMethod.GET)
-    public String PiirivalvurController.updateForm(@PathVariable("piirivalvurId") int piirivalvurId, Model uiModel) {
+    public String PiirivalvurController.updateForm(@PathVariable("piirivalvurId") Long piirivalvurId, Model uiModel) {
         uiModel.addAttribute("piirivalvur", Piirivalvur.findPiirivalvur(piirivalvurId));
         return "piirivalvurs/update";
     }
     
     @RequestMapping(value = "/{piirivalvurId}", method = RequestMethod.DELETE)
-    public String PiirivalvurController.delete(@PathVariable("piirivalvurId") int piirivalvurId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiirivalvurController.delete(@PathVariable("piirivalvurId") Long piirivalvurId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Piirivalvur.findPiirivalvur(piirivalvurId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.PiirivalvuriSeadusIntsidendi;
 import ee.itcollege.group04_2011.entities.SeadusePunkt;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect PiirivalvuriSeadusIntsidendiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvuriSeadusIntsidendi}", method = RequestMethod.GET)
-    public String PiirivalvuriSeadusIntsidendiController.show(@PathVariable("piirivalvuriSeadusIntsidendi") int piirivalvuriSeadusIntsidendi, Model uiModel) {
+    public String PiirivalvuriSeadusIntsidendiController.show(@PathVariable("piirivalvuriSeadusIntsidendi") Long piirivalvuriSeadusIntsidendi, Model uiModel) {
         uiModel.addAttribute("piirivalvuriseadusintsidendi", PiirivalvuriSeadusIntsidendi.findPiirivalvuriSeadusIntsidendi(piirivalvuriSeadusIntsidendi));
         uiModel.addAttribute("itemId", piirivalvuriSeadusIntsidendi);
         return "piirivalvuriseadusintsidendis/show";
@@ -73,13 +74,13 @@ privileged aspect PiirivalvuriSeadusIntsidendiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvuriSeadusIntsidendi}", params = "form", method = RequestMethod.GET)
-    public String PiirivalvuriSeadusIntsidendiController.updateForm(@PathVariable("piirivalvuriSeadusIntsidendi") int piirivalvuriSeadusIntsidendi, Model uiModel) {
+    public String PiirivalvuriSeadusIntsidendiController.updateForm(@PathVariable("piirivalvuriSeadusIntsidendi") Long piirivalvuriSeadusIntsidendi, Model uiModel) {
         uiModel.addAttribute("piirivalvuriSeadusIntsidendi", PiirivalvuriSeadusIntsidendi.findPiirivalvuriSeadusIntsidendi(piirivalvuriSeadusIntsidendi));
         return "piirivalvuriseadusintsidendis/update";
     }
     
     @RequestMapping(value = "/{piirivalvuriSeadusIntsidendi}", method = RequestMethod.DELETE)
-    public String PiirivalvuriSeadusIntsidendiController.delete(@PathVariable("piirivalvuriSeadusIntsidendi") int piirivalvuriSeadusIntsidendi, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiirivalvuriSeadusIntsidendiController.delete(@PathVariable("piirivalvuriSeadusIntsidendi") Long piirivalvuriSeadusIntsidendi, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         PiirivalvuriSeadusIntsidendi.findPiirivalvuriSeadusIntsidendi(piirivalvuriSeadusIntsidendi).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

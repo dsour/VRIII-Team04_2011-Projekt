@@ -6,6 +6,7 @@ package ee.itcollege.group04_2011.web;
 import ee.itcollege.group04_2011.entities.VoimalikAlluvus;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -40,7 +41,7 @@ privileged aspect VoimalikAlluvusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{voimalikAlluvusId}", method = RequestMethod.GET)
-    public String VoimalikAlluvusController.show(@PathVariable("voimalikAlluvusId") int voimalikAlluvusId, Model uiModel) {
+    public String VoimalikAlluvusController.show(@PathVariable("voimalikAlluvusId") Long voimalikAlluvusId, Model uiModel) {
         uiModel.addAttribute("voimalikalluvus", VoimalikAlluvus.findVoimalikAlluvus(voimalikAlluvusId));
         uiModel.addAttribute("itemId", voimalikAlluvusId);
         return "voimalikalluvuses/show";
@@ -71,13 +72,13 @@ privileged aspect VoimalikAlluvusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{voimalikAlluvusId}", params = "form", method = RequestMethod.GET)
-    public String VoimalikAlluvusController.updateForm(@PathVariable("voimalikAlluvusId") int voimalikAlluvusId, Model uiModel) {
+    public String VoimalikAlluvusController.updateForm(@PathVariable("voimalikAlluvusId") Long voimalikAlluvusId, Model uiModel) {
         uiModel.addAttribute("voimalikAlluvus", VoimalikAlluvus.findVoimalikAlluvus(voimalikAlluvusId));
         return "voimalikalluvuses/update";
     }
     
     @RequestMapping(value = "/{voimalikAlluvusId}", method = RequestMethod.DELETE)
-    public String VoimalikAlluvusController.delete(@PathVariable("voimalikAlluvusId") int voimalikAlluvusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String VoimalikAlluvusController.delete(@PathVariable("voimalikAlluvusId") Long voimalikAlluvusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         VoimalikAlluvus.findVoimalikAlluvus(voimalikAlluvusId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

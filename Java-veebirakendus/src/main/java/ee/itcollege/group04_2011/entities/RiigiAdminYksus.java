@@ -34,7 +34,7 @@ public class RiigiAdminYksus implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="RIIGI_ADMIN_YKSUS_ID")
-	private int riigiAdminYksusId;
+	private Long riigiAdminYksusId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -87,11 +87,11 @@ public class RiigiAdminYksus implements Serializable {
     public RiigiAdminYksus() {
     }
 
-	public int getRiigiAdminYksusId() {
+	public Long getRiigiAdminYksusId() {
 		return this.riigiAdminYksusId;
 	}
 
-	public void setRiigiAdminYksusId(int riigiAdminYksusId) {
+	public void setRiigiAdminYksusId(Long riigiAdminYksusId) {
 		this.riigiAdminYksusId = riigiAdminYksusId;
 	}
 

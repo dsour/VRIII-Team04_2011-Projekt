@@ -32,7 +32,7 @@ public class RuumiyksuseLiik implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="RUUMIYKSUSE_LIIK_ID")
-	private int ruumiyksuseLiikId;
+	private Long ruumiyksuseLiikId;
 
 	private String avaja;
 
@@ -62,11 +62,11 @@ public class RuumiyksuseLiik implements Serializable {
     public RuumiyksuseLiik() {
     }
 
-	public int getRuumiyksuseLiikId() {
+	public Long getRuumiyksuseLiikId() {
 		return this.ruumiyksuseLiikId;
 	}
 
-	public void setRuumiyksuseLiikId(int ruumiyksuseLiikId) {
+	public void setRuumiyksuseLiikId(Long ruumiyksuseLiikId) {
 		this.ruumiyksuseLiikId = ruumiyksuseLiikId;
 	}
 

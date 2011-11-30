@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.Piiririkkuja;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect Piiririkkuja_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM Piiririkkuja o", Piiririkkuja.class).getResultList();
     }
     
-    public static Piiririkkuja Piiririkkuja.findPiiririkkuja(int piiririkkujaId) {
+    public static Piiririkkuja Piiririkkuja.findPiiririkkuja(Long piiririkkujaId) {
+        if (piiririkkujaId == null) return null;
         return entityManager().find(Piiririkkuja.class, piiririkkujaId);
     }
     
