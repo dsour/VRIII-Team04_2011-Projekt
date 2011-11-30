@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.AmetPiiripunkti;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect AmetPiiripunkti_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM AmetPiiripunkti o", AmetPiiripunkti.class).getResultList();
     }
     
-    public static AmetPiiripunkti AmetPiiripunkti.findAmetPiiripunkti(int ametPiiripunktisId) {
+    public static AmetPiiripunkti AmetPiiripunkti.findAmetPiiripunkti(Long ametPiiripunktisId) {
+        if (ametPiiripunktisId == null) return null;
         return entityManager().find(AmetPiiripunkti.class, ametPiiripunktisId);
     }
     

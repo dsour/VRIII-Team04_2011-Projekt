@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.PiiripunktiAlluvus;
 import ee.itcollege.group04_2011.entities.Vaeosa;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect PiiripunktiAlluvusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piiripunktiAlluvusId}", method = RequestMethod.GET)
-    public String PiiripunktiAlluvusController.show(@PathVariable("piiripunktiAlluvusId") int piiripunktiAlluvusId, Model uiModel) {
+    public String PiiripunktiAlluvusController.show(@PathVariable("piiripunktiAlluvusId") Long piiripunktiAlluvusId, Model uiModel) {
         uiModel.addAttribute("piiripunktialluvus", PiiripunktiAlluvus.findPiiripunktiAlluvus(piiripunktiAlluvusId));
         uiModel.addAttribute("itemId", piiripunktiAlluvusId);
         return "piiripunktialluvuses/show";
@@ -73,13 +74,13 @@ privileged aspect PiiripunktiAlluvusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piiripunktiAlluvusId}", params = "form", method = RequestMethod.GET)
-    public String PiiripunktiAlluvusController.updateForm(@PathVariable("piiripunktiAlluvusId") int piiripunktiAlluvusId, Model uiModel) {
+    public String PiiripunktiAlluvusController.updateForm(@PathVariable("piiripunktiAlluvusId") Long piiripunktiAlluvusId, Model uiModel) {
         uiModel.addAttribute("piiripunktiAlluvus", PiiripunktiAlluvus.findPiiripunktiAlluvus(piiripunktiAlluvusId));
         return "piiripunktialluvuses/update";
     }
     
     @RequestMapping(value = "/{piiripunktiAlluvusId}", method = RequestMethod.DELETE)
-    public String PiiripunktiAlluvusController.delete(@PathVariable("piiripunktiAlluvusId") int piiripunktiAlluvusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiiripunktiAlluvusController.delete(@PathVariable("piiripunktiAlluvusId") Long piiripunktiAlluvusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         PiiripunktiAlluvus.findPiiripunktiAlluvus(piiripunktiAlluvusId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

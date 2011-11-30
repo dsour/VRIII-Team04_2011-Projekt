@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.IsikuSeadusIntsidendi;
 import ee.itcollege.group04_2011.entities.SeadusePunkt;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect IsikuSeadusIntsidendiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{isikuSeadusIntsidendisId}", method = RequestMethod.GET)
-    public String IsikuSeadusIntsidendiController.show(@PathVariable("isikuSeadusIntsidendisId") int isikuSeadusIntsidendisId, Model uiModel) {
+    public String IsikuSeadusIntsidendiController.show(@PathVariable("isikuSeadusIntsidendisId") Long isikuSeadusIntsidendisId, Model uiModel) {
         uiModel.addAttribute("isikuseadusintsidendi", IsikuSeadusIntsidendi.findIsikuSeadusIntsidendi(isikuSeadusIntsidendisId));
         uiModel.addAttribute("itemId", isikuSeadusIntsidendisId);
         return "isikuseadusintsidendis/show";
@@ -73,13 +74,13 @@ privileged aspect IsikuSeadusIntsidendiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{isikuSeadusIntsidendisId}", params = "form", method = RequestMethod.GET)
-    public String IsikuSeadusIntsidendiController.updateForm(@PathVariable("isikuSeadusIntsidendisId") int isikuSeadusIntsidendisId, Model uiModel) {
+    public String IsikuSeadusIntsidendiController.updateForm(@PathVariable("isikuSeadusIntsidendisId") Long isikuSeadusIntsidendisId, Model uiModel) {
         uiModel.addAttribute("isikuSeadusIntsidendi", IsikuSeadusIntsidendi.findIsikuSeadusIntsidendi(isikuSeadusIntsidendisId));
         return "isikuseadusintsidendis/update";
     }
     
     @RequestMapping(value = "/{isikuSeadusIntsidendisId}", method = RequestMethod.DELETE)
-    public String IsikuSeadusIntsidendiController.delete(@PathVariable("isikuSeadusIntsidendisId") int isikuSeadusIntsidendisId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String IsikuSeadusIntsidendiController.delete(@PathVariable("isikuSeadusIntsidendisId") Long isikuSeadusIntsidendisId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         IsikuSeadusIntsidendi.findIsikuSeadusIntsidendi(isikuSeadusIntsidendisId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

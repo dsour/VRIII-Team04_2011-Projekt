@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.AuastmeMuutumine;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect AuastmeMuutumine_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM AuastmeMuutumine o", AuastmeMuutumine.class).getResultList();
     }
     
-    public static AuastmeMuutumine AuastmeMuutumine.findAuastmeMuutumine(int auastmeMuutumineId) {
+    public static AuastmeMuutumine AuastmeMuutumine.findAuastmeMuutumine(Long auastmeMuutumineId) {
+        if (auastmeMuutumineId == null) return null;
         return entityManager().find(AuastmeMuutumine.class, auastmeMuutumineId);
     }
     

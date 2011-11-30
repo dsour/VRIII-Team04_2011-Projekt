@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.AuastmeMuutumine;
 import ee.itcollege.group04_2011.entities.Piirivalvur;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect AuastmeMuutumineController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{auastmeMuutumineId}", method = RequestMethod.GET)
-    public String AuastmeMuutumineController.show(@PathVariable("auastmeMuutumineId") int auastmeMuutumineId, Model uiModel) {
+    public String AuastmeMuutumineController.show(@PathVariable("auastmeMuutumineId") Long auastmeMuutumineId, Model uiModel) {
         uiModel.addAttribute("auastmemuutumine", AuastmeMuutumine.findAuastmeMuutumine(auastmeMuutumineId));
         uiModel.addAttribute("itemId", auastmeMuutumineId);
         return "auastmemuutumines/show";
@@ -73,13 +74,13 @@ privileged aspect AuastmeMuutumineController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{auastmeMuutumineId}", params = "form", method = RequestMethod.GET)
-    public String AuastmeMuutumineController.updateForm(@PathVariable("auastmeMuutumineId") int auastmeMuutumineId, Model uiModel) {
+    public String AuastmeMuutumineController.updateForm(@PathVariable("auastmeMuutumineId") Long auastmeMuutumineId, Model uiModel) {
         uiModel.addAttribute("auastmeMuutumine", AuastmeMuutumine.findAuastmeMuutumine(auastmeMuutumineId));
         return "auastmemuutumines/update";
     }
     
     @RequestMapping(value = "/{auastmeMuutumineId}", method = RequestMethod.DELETE)
-    public String AuastmeMuutumineController.delete(@PathVariable("auastmeMuutumineId") int auastmeMuutumineId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String AuastmeMuutumineController.delete(@PathVariable("auastmeMuutumineId") Long auastmeMuutumineId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         AuastmeMuutumine.findAuastmeMuutumine(auastmeMuutumineId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

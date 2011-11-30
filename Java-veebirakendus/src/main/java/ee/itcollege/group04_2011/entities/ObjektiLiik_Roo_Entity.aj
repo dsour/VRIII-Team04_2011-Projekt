@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.ObjektiLiik;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect ObjektiLiik_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM ObjektiLiik o", ObjektiLiik.class).getResultList();
     }
     
-    public static ObjektiLiik ObjektiLiik.findObjektiLiik(int objektLiikId) {
+    public static ObjektiLiik ObjektiLiik.findObjektiLiik(Long objektLiikId) {
+        if (objektLiikId == null) return null;
         return entityManager().find(ObjektiLiik.class, objektLiikId);
     }
     

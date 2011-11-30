@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.Objekt;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect Objekt_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM Objekt o", Objekt.class).getResultList();
     }
     
-    public static Objekt Objekt.findObjekt(int objektId) {
+    public static Objekt Objekt.findObjekt(Long objektId) {
+        if (objektId == null) return null;
         return entityManager().find(Objekt.class, objektId);
     }
     

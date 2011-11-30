@@ -7,6 +7,7 @@ import ee.itcollege.group04_2011.entities.Objekt;
 import ee.itcollege.group04_2011.entities.ObjektiLiik;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +42,7 @@ privileged aspect ObjektiLiikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{objektLiikId}", method = RequestMethod.GET)
-    public String ObjektiLiikController.show(@PathVariable("objektLiikId") int objektLiikId, Model uiModel) {
+    public String ObjektiLiikController.show(@PathVariable("objektLiikId") Long objektLiikId, Model uiModel) {
         uiModel.addAttribute("objektiliik", ObjektiLiik.findObjektiLiik(objektLiikId));
         uiModel.addAttribute("itemId", objektLiikId);
         return "objektiliiks/show";
@@ -72,13 +73,13 @@ privileged aspect ObjektiLiikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{objektLiikId}", params = "form", method = RequestMethod.GET)
-    public String ObjektiLiikController.updateForm(@PathVariable("objektLiikId") int objektLiikId, Model uiModel) {
+    public String ObjektiLiikController.updateForm(@PathVariable("objektLiikId") Long objektLiikId, Model uiModel) {
         uiModel.addAttribute("objektiLiik", ObjektiLiik.findObjektiLiik(objektLiikId));
         return "objektiliiks/update";
     }
     
     @RequestMapping(value = "/{objektLiikId}", method = RequestMethod.DELETE)
-    public String ObjektiLiikController.delete(@PathVariable("objektLiikId") int objektLiikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String ObjektiLiikController.delete(@PathVariable("objektLiikId") Long objektLiikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         ObjektiLiik.findObjektiLiik(objektLiikId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

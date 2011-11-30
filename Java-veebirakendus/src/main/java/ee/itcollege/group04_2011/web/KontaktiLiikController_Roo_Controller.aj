@@ -7,6 +7,7 @@ import ee.itcollege.group04_2011.entities.KontaktiLiik;
 import ee.itcollege.group04_2011.entities.PiirivalvuriKontakt;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +42,7 @@ privileged aspect KontaktiLiikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{kontaktiLiikId}", method = RequestMethod.GET)
-    public String KontaktiLiikController.show(@PathVariable("kontaktiLiikId") int kontaktiLiikId, Model uiModel) {
+    public String KontaktiLiikController.show(@PathVariable("kontaktiLiikId") Long kontaktiLiikId, Model uiModel) {
         uiModel.addAttribute("kontaktiliik", KontaktiLiik.findKontaktiLiik(kontaktiLiikId));
         uiModel.addAttribute("itemId", kontaktiLiikId);
         return "kontaktiliiks/show";
@@ -72,13 +73,13 @@ privileged aspect KontaktiLiikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{kontaktiLiikId}", params = "form", method = RequestMethod.GET)
-    public String KontaktiLiikController.updateForm(@PathVariable("kontaktiLiikId") int kontaktiLiikId, Model uiModel) {
+    public String KontaktiLiikController.updateForm(@PathVariable("kontaktiLiikId") Long kontaktiLiikId, Model uiModel) {
         uiModel.addAttribute("kontaktiLiik", KontaktiLiik.findKontaktiLiik(kontaktiLiikId));
         return "kontaktiliiks/update";
     }
     
     @RequestMapping(value = "/{kontaktiLiikId}", method = RequestMethod.DELETE)
-    public String KontaktiLiikController.delete(@PathVariable("kontaktiLiikId") int kontaktiLiikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String KontaktiLiikController.delete(@PathVariable("kontaktiLiikId") Long kontaktiLiikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         KontaktiLiik.findKontaktiLiik(kontaktiLiikId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

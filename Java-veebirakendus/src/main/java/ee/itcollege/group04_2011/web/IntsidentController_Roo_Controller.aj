@@ -12,6 +12,7 @@ import ee.itcollege.group04_2011.entities.PiirivalvurIntsidendi;
 import ee.itcollege.group04_2011.entities.VahtkondIntsidendi;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -46,7 +47,7 @@ privileged aspect IntsidentController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{intsidentId}", method = RequestMethod.GET)
-    public String IntsidentController.show(@PathVariable("intsidentId") int intsidentId, Model uiModel) {
+    public String IntsidentController.show(@PathVariable("intsidentId") Long intsidentId, Model uiModel) {
         uiModel.addAttribute("intsident", Intsident.findIntsident(intsidentId));
         uiModel.addAttribute("itemId", intsidentId);
         return "intsidents/show";
@@ -77,13 +78,13 @@ privileged aspect IntsidentController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{intsidentId}", params = "form", method = RequestMethod.GET)
-    public String IntsidentController.updateForm(@PathVariable("intsidentId") int intsidentId, Model uiModel) {
+    public String IntsidentController.updateForm(@PathVariable("intsidentId") Long intsidentId, Model uiModel) {
         uiModel.addAttribute("intsident", Intsident.findIntsident(intsidentId));
         return "intsidents/update";
     }
     
     @RequestMapping(value = "/{intsidentId}", method = RequestMethod.DELETE)
-    public String IntsidentController.delete(@PathVariable("intsidentId") int intsidentId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String IntsidentController.delete(@PathVariable("intsidentId") Long intsidentId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Intsident.findIntsident(intsidentId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.PiiriloiguHaldaja;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect PiiriloiguHaldaja_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM PiiriloiguHaldaja o", PiiriloiguHaldaja.class).getResultList();
     }
     
-    public static PiiriloiguHaldaja PiiriloiguHaldaja.findPiiriloiguHaldaja(int piiriloiguHaldajaId) {
+    public static PiiriloiguHaldaja PiiriloiguHaldaja.findPiiriloiguHaldaja(Long piiriloiguHaldajaId) {
+        if (piiriloiguHaldajaId == null) return null;
         return entityManager().find(PiiriloiguHaldaja.class, piiriloiguHaldajaId);
     }
     

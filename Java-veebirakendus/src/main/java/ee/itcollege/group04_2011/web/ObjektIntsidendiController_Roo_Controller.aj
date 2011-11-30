@@ -9,6 +9,7 @@ import ee.itcollege.group04_2011.entities.ObjektIntsidendi;
 import ee.itcollege.group04_2011.entities.ObjektiSeadusIntsidendi;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ privileged aspect ObjektIntsidendiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{objektIntsidendisId}", method = RequestMethod.GET)
-    public String ObjektIntsidendiController.show(@PathVariable("objektIntsidendisId") int objektIntsidendisId, Model uiModel) {
+    public String ObjektIntsidendiController.show(@PathVariable("objektIntsidendisId") Long objektIntsidendisId, Model uiModel) {
         uiModel.addAttribute("objektintsidendi", ObjektIntsidendi.findObjektIntsidendi(objektIntsidendisId));
         uiModel.addAttribute("itemId", objektIntsidendisId);
         return "objektintsidendis/show";
@@ -74,13 +75,13 @@ privileged aspect ObjektIntsidendiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{objektIntsidendisId}", params = "form", method = RequestMethod.GET)
-    public String ObjektIntsidendiController.updateForm(@PathVariable("objektIntsidendisId") int objektIntsidendisId, Model uiModel) {
+    public String ObjektIntsidendiController.updateForm(@PathVariable("objektIntsidendisId") Long objektIntsidendisId, Model uiModel) {
         uiModel.addAttribute("objektIntsidendi", ObjektIntsidendi.findObjektIntsidendi(objektIntsidendisId));
         return "objektintsidendis/update";
     }
     
     @RequestMapping(value = "/{objektIntsidendisId}", method = RequestMethod.DELETE)
-    public String ObjektIntsidendiController.delete(@PathVariable("objektIntsidendisId") int objektIntsidendisId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String ObjektIntsidendiController.delete(@PathVariable("objektIntsidendisId") Long objektIntsidendisId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         ObjektIntsidendi.findObjektIntsidendi(objektIntsidendisId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

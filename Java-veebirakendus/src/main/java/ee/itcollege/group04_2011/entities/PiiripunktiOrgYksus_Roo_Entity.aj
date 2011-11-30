@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.PiiripunktiOrgYksus;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect PiiripunktiOrgYksus_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM PiiripunktiOrgYksus o", PiiripunktiOrgYksus.class).getResultList();
     }
     
-    public static PiiripunktiOrgYksus PiiripunktiOrgYksus.findPiiripunktiOrgYksus(int piiripunktiOrgYksusId) {
+    public static PiiripunktiOrgYksus PiiripunktiOrgYksus.findPiiripunktiOrgYksus(Long piiripunktiOrgYksusId) {
+        if (piiripunktiOrgYksusId == null) return null;
         return entityManager().find(PiiripunktiOrgYksus.class, piiripunktiOrgYksusId);
     }
     

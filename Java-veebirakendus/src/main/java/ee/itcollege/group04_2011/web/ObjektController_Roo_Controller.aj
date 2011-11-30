@@ -9,6 +9,7 @@ import ee.itcollege.group04_2011.entities.ObjektiLiik;
 import ee.itcollege.group04_2011.entities.Piiririkkuja;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ privileged aspect ObjektController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{objektId}", method = RequestMethod.GET)
-    public String ObjektController.show(@PathVariable("objektId") int objektId, Model uiModel) {
+    public String ObjektController.show(@PathVariable("objektId") Long objektId, Model uiModel) {
         uiModel.addAttribute("objekt", Objekt.findObjekt(objektId));
         uiModel.addAttribute("itemId", objektId);
         return "objekts/show";
@@ -74,13 +75,13 @@ privileged aspect ObjektController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{objektId}", params = "form", method = RequestMethod.GET)
-    public String ObjektController.updateForm(@PathVariable("objektId") int objektId, Model uiModel) {
+    public String ObjektController.updateForm(@PathVariable("objektId") Long objektId, Model uiModel) {
         uiModel.addAttribute("objekt", Objekt.findObjekt(objektId));
         return "objekts/update";
     }
     
     @RequestMapping(value = "/{objektId}", method = RequestMethod.DELETE)
-    public String ObjektController.delete(@PathVariable("objektId") int objektId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String ObjektController.delete(@PathVariable("objektId") Long objektId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Objekt.findObjekt(objektId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

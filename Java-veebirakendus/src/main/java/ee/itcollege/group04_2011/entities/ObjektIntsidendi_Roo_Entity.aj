@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.ObjektIntsidendi;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect ObjektIntsidendi_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM ObjektIntsidendi o", ObjektIntsidendi.class).getResultList();
     }
     
-    public static ObjektIntsidendi ObjektIntsidendi.findObjektIntsidendi(int objektIntsidendisId) {
+    public static ObjektIntsidendi ObjektIntsidendi.findObjektIntsidendi(Long objektIntsidendisId) {
+        if (objektIntsidendisId == null) return null;
         return entityManager().find(ObjektIntsidendi.class, objektIntsidendisId);
     }
     

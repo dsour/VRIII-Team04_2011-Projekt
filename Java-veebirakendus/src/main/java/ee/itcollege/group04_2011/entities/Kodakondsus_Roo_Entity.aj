@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.Kodakondsus;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect Kodakondsus_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM Kodakondsus o", Kodakondsus.class).getResultList();
     }
     
-    public static Kodakondsus Kodakondsus.findKodakondsus(int kodakondsusId) {
+    public static Kodakondsus Kodakondsus.findKodakondsus(Long kodakondsusId) {
+        if (kodakondsusId == null) return null;
         return entityManager().find(Kodakondsus.class, kodakondsusId);
     }
     

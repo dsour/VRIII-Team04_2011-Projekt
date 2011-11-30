@@ -7,6 +7,7 @@ import ee.itcollege.group04_2011.entities.Piiripunkt;
 import ee.itcollege.group04_2011.entities.PiiripunktiOrgYksus;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +42,7 @@ privileged aspect PiiripunktiOrgYksusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piiripunktiOrgYksusId}", method = RequestMethod.GET)
-    public String PiiripunktiOrgYksusController.show(@PathVariable("piiripunktiOrgYksusId") int piiripunktiOrgYksusId, Model uiModel) {
+    public String PiiripunktiOrgYksusController.show(@PathVariable("piiripunktiOrgYksusId") Long piiripunktiOrgYksusId, Model uiModel) {
         uiModel.addAttribute("piiripunktiorgyksus", PiiripunktiOrgYksus.findPiiripunktiOrgYksus(piiripunktiOrgYksusId));
         uiModel.addAttribute("itemId", piiripunktiOrgYksusId);
         return "piiripunktiorgyksuses/show";
@@ -72,13 +73,13 @@ privileged aspect PiiripunktiOrgYksusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piiripunktiOrgYksusId}", params = "form", method = RequestMethod.GET)
-    public String PiiripunktiOrgYksusController.updateForm(@PathVariable("piiripunktiOrgYksusId") int piiripunktiOrgYksusId, Model uiModel) {
+    public String PiiripunktiOrgYksusController.updateForm(@PathVariable("piiripunktiOrgYksusId") Long piiripunktiOrgYksusId, Model uiModel) {
         uiModel.addAttribute("piiripunktiOrgYksus", PiiripunktiOrgYksus.findPiiripunktiOrgYksus(piiripunktiOrgYksusId));
         return "piiripunktiorgyksuses/update";
     }
     
     @RequestMapping(value = "/{piiripunktiOrgYksusId}", method = RequestMethod.DELETE)
-    public String PiiripunktiOrgYksusController.delete(@PathVariable("piiripunktiOrgYksusId") int piiripunktiOrgYksusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiiripunktiOrgYksusController.delete(@PathVariable("piiripunktiOrgYksusId") Long piiripunktiOrgYksusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         PiiripunktiOrgYksus.findPiiripunktiOrgYksus(piiripunktiOrgYksusId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.Amet;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect Amet_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM Amet o", Amet.class).getResultList();
     }
     
-    public static Amet Amet.findAmet(int ametId) {
+    public static Amet Amet.findAmet(Long ametId) {
+        if (ametId == null) return null;
         return entityManager().find(Amet.class, ametId);
     }
     

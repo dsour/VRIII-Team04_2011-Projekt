@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.Piiripunkt;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect Piiripunkt_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM Piiripunkt o", Piiripunkt.class).getResultList();
     }
     
-    public static Piiripunkt Piiripunkt.findPiiripunkt(int piiripunktId) {
+    public static Piiripunkt Piiripunkt.findPiiripunkt(Long piiripunktId) {
+        if (piiripunktId == null) return null;
         return entityManager().find(Piiripunkt.class, piiripunktId);
     }
     

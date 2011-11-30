@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.OrgYksus;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect OrgYksus_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM OrgYksus o", OrgYksus.class).getResultList();
     }
     
-    public static OrgYksus OrgYksus.findOrgYksus(int orgYksusId) {
+    public static OrgYksus OrgYksus.findOrgYksus(Long orgYksusId) {
+        if (orgYksusId == null) return null;
         return entityManager().find(OrgYksus.class, orgYksusId);
     }
     

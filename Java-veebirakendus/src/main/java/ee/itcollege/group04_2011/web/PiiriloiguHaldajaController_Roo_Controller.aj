@@ -9,6 +9,7 @@ import ee.itcollege.group04_2011.entities.Piiripunkt;
 import ee.itcollege.group04_2011.entities.Vaeosa;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ privileged aspect PiiriloiguHaldajaController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piiriloiguHaldajaId}", method = RequestMethod.GET)
-    public String PiiriloiguHaldajaController.show(@PathVariable("piiriloiguHaldajaId") int piiriloiguHaldajaId, Model uiModel) {
+    public String PiiriloiguHaldajaController.show(@PathVariable("piiriloiguHaldajaId") Long piiriloiguHaldajaId, Model uiModel) {
         uiModel.addAttribute("piiriloiguhaldaja", PiiriloiguHaldaja.findPiiriloiguHaldaja(piiriloiguHaldajaId));
         uiModel.addAttribute("itemId", piiriloiguHaldajaId);
         return "piiriloiguhaldajas/show";
@@ -74,13 +75,13 @@ privileged aspect PiiriloiguHaldajaController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piiriloiguHaldajaId}", params = "form", method = RequestMethod.GET)
-    public String PiiriloiguHaldajaController.updateForm(@PathVariable("piiriloiguHaldajaId") int piiriloiguHaldajaId, Model uiModel) {
+    public String PiiriloiguHaldajaController.updateForm(@PathVariable("piiriloiguHaldajaId") Long piiriloiguHaldajaId, Model uiModel) {
         uiModel.addAttribute("piiriloiguHaldaja", PiiriloiguHaldaja.findPiiriloiguHaldaja(piiriloiguHaldajaId));
         return "piiriloiguhaldajas/update";
     }
     
     @RequestMapping(value = "/{piiriloiguHaldajaId}", method = RequestMethod.DELETE)
-    public String PiiriloiguHaldajaController.delete(@PathVariable("piiriloiguHaldajaId") int piiriloiguHaldajaId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiiriloiguHaldajaController.delete(@PathVariable("piiriloiguHaldajaId") Long piiriloiguHaldajaId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         PiiriloiguHaldaja.findPiiriloiguHaldaja(piiriloiguHaldajaId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

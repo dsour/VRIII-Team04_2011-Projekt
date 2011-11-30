@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.Auaste;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect Auaste_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM Auaste o", Auaste.class).getResultList();
     }
     
-    public static Auaste Auaste.findAuaste(int auasteId) {
+    public static Auaste Auaste.findAuaste(Long auasteId) {
+        if (auasteId == null) return null;
         return entityManager().find(Auaste.class, auasteId);
     }
     

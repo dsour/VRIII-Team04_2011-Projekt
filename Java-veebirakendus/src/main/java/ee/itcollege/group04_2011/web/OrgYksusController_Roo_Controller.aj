@@ -7,6 +7,7 @@ import ee.itcollege.group04_2011.entities.OrgYksus;
 import ee.itcollege.group04_2011.entities.Vaeosa;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +42,7 @@ privileged aspect OrgYksusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{orgYksusId}", method = RequestMethod.GET)
-    public String OrgYksusController.show(@PathVariable("orgYksusId") int orgYksusId, Model uiModel) {
+    public String OrgYksusController.show(@PathVariable("orgYksusId") Long orgYksusId, Model uiModel) {
         uiModel.addAttribute("orgyksus", OrgYksus.findOrgYksus(orgYksusId));
         uiModel.addAttribute("itemId", orgYksusId);
         return "orgyksuses/show";
@@ -72,13 +73,13 @@ privileged aspect OrgYksusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{orgYksusId}", params = "form", method = RequestMethod.GET)
-    public String OrgYksusController.updateForm(@PathVariable("orgYksusId") int orgYksusId, Model uiModel) {
+    public String OrgYksusController.updateForm(@PathVariable("orgYksusId") Long orgYksusId, Model uiModel) {
         uiModel.addAttribute("orgYksus", OrgYksus.findOrgYksus(orgYksusId));
         return "orgyksuses/update";
     }
     
     @RequestMapping(value = "/{orgYksusId}", method = RequestMethod.DELETE)
-    public String OrgYksusController.delete(@PathVariable("orgYksusId") int orgYksusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String OrgYksusController.delete(@PathVariable("orgYksusId") Long orgYksusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         OrgYksus.findOrgYksus(orgYksusId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

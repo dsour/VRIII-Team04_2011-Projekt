@@ -9,6 +9,7 @@ import ee.itcollege.group04_2011.entities.PiirivalvurVaeosa;
 import ee.itcollege.group04_2011.entities.Vaeosa;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ privileged aspect AmetVaeosaController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{ametVaeosasId}", method = RequestMethod.GET)
-    public String AmetVaeosaController.show(@PathVariable("ametVaeosasId") int ametVaeosasId, Model uiModel) {
+    public String AmetVaeosaController.show(@PathVariable("ametVaeosasId") Long ametVaeosasId, Model uiModel) {
         uiModel.addAttribute("ametvaeosa", AmetVaeosa.findAmetVaeosa(ametVaeosasId));
         uiModel.addAttribute("itemId", ametVaeosasId);
         return "ametvaeosas/show";
@@ -74,13 +75,13 @@ privileged aspect AmetVaeosaController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{ametVaeosasId}", params = "form", method = RequestMethod.GET)
-    public String AmetVaeosaController.updateForm(@PathVariable("ametVaeosasId") int ametVaeosasId, Model uiModel) {
+    public String AmetVaeosaController.updateForm(@PathVariable("ametVaeosasId") Long ametVaeosasId, Model uiModel) {
         uiModel.addAttribute("ametVaeosa", AmetVaeosa.findAmetVaeosa(ametVaeosasId));
         return "ametvaeosas/update";
     }
     
     @RequestMapping(value = "/{ametVaeosasId}", method = RequestMethod.DELETE)
-    public String AmetVaeosaController.delete(@PathVariable("ametVaeosasId") int ametVaeosasId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String AmetVaeosaController.delete(@PathVariable("ametVaeosasId") Long ametVaeosasId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         AmetVaeosa.findAmetVaeosa(ametVaeosasId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.Piiririkkuja;
 import ee.itcollege.group04_2011.entities.Riik;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect KodakondsusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{kodakondsusId}", method = RequestMethod.GET)
-    public String KodakondsusController.show(@PathVariable("kodakondsusId") int kodakondsusId, Model uiModel) {
+    public String KodakondsusController.show(@PathVariable("kodakondsusId") Long kodakondsusId, Model uiModel) {
         uiModel.addAttribute("kodakondsus", Kodakondsus.findKodakondsus(kodakondsusId));
         uiModel.addAttribute("itemId", kodakondsusId);
         return "kodakondsuses/show";
@@ -73,13 +74,13 @@ privileged aspect KodakondsusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{kodakondsusId}", params = "form", method = RequestMethod.GET)
-    public String KodakondsusController.updateForm(@PathVariable("kodakondsusId") int kodakondsusId, Model uiModel) {
+    public String KodakondsusController.updateForm(@PathVariable("kodakondsusId") Long kodakondsusId, Model uiModel) {
         uiModel.addAttribute("kodakondsus", Kodakondsus.findKodakondsus(kodakondsusId));
         return "kodakondsuses/update";
     }
     
     @RequestMapping(value = "/{kodakondsusId}", method = RequestMethod.DELETE)
-    public String KodakondsusController.delete(@PathVariable("kodakondsusId") int kodakondsusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String KodakondsusController.delete(@PathVariable("kodakondsusId") Long kodakondsusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Kodakondsus.findKodakondsus(kodakondsusId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

@@ -9,6 +9,7 @@ import ee.itcollege.group04_2011.entities.Piiripunkt;
 import ee.itcollege.group04_2011.entities.PiirivalvurPiiripunkti;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ privileged aspect AmetPiiripunktiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{ametPiiripunktisId}", method = RequestMethod.GET)
-    public String AmetPiiripunktiController.show(@PathVariable("ametPiiripunktisId") int ametPiiripunktisId, Model uiModel) {
+    public String AmetPiiripunktiController.show(@PathVariable("ametPiiripunktisId") Long ametPiiripunktisId, Model uiModel) {
         uiModel.addAttribute("ametpiiripunkti", AmetPiiripunkti.findAmetPiiripunkti(ametPiiripunktisId));
         uiModel.addAttribute("itemId", ametPiiripunktisId);
         return "ametpiiripunktis/show";
@@ -74,13 +75,13 @@ privileged aspect AmetPiiripunktiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{ametPiiripunktisId}", params = "form", method = RequestMethod.GET)
-    public String AmetPiiripunktiController.updateForm(@PathVariable("ametPiiripunktisId") int ametPiiripunktisId, Model uiModel) {
+    public String AmetPiiripunktiController.updateForm(@PathVariable("ametPiiripunktisId") Long ametPiiripunktisId, Model uiModel) {
         uiModel.addAttribute("ametPiiripunkti", AmetPiiripunkti.findAmetPiiripunkti(ametPiiripunktisId));
         return "ametpiiripunktis/update";
     }
     
     @RequestMapping(value = "/{ametPiiripunktisId}", method = RequestMethod.DELETE)
-    public String AmetPiiripunktiController.delete(@PathVariable("ametPiiripunktisId") int ametPiiripunktisId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String AmetPiiripunktiController.delete(@PathVariable("ametPiiripunktisId") Long ametPiiripunktisId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         AmetPiiripunkti.findAmetPiiripunkti(ametPiiripunktisId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

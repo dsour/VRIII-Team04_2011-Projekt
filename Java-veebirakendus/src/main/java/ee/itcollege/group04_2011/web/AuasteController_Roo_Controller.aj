@@ -7,6 +7,7 @@ import ee.itcollege.group04_2011.entities.Auaste;
 import ee.itcollege.group04_2011.entities.AuastmeMuutumine;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +42,7 @@ privileged aspect AuasteController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{auasteId}", method = RequestMethod.GET)
-    public String AuasteController.show(@PathVariable("auasteId") int auasteId, Model uiModel) {
+    public String AuasteController.show(@PathVariable("auasteId") Long auasteId, Model uiModel) {
         uiModel.addAttribute("auaste", Auaste.findAuaste(auasteId));
         uiModel.addAttribute("itemId", auasteId);
         return "auastes/show";
@@ -72,13 +73,13 @@ privileged aspect AuasteController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{auasteId}", params = "form", method = RequestMethod.GET)
-    public String AuasteController.updateForm(@PathVariable("auasteId") int auasteId, Model uiModel) {
+    public String AuasteController.updateForm(@PathVariable("auasteId") Long auasteId, Model uiModel) {
         uiModel.addAttribute("auaste", Auaste.findAuaste(auasteId));
         return "auastes/update";
     }
     
     @RequestMapping(value = "/{auasteId}", method = RequestMethod.DELETE)
-    public String AuasteController.delete(@PathVariable("auasteId") int auasteId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String AuasteController.delete(@PathVariable("auasteId") Long auasteId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Auaste.findAuaste(auasteId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

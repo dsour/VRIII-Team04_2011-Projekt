@@ -9,6 +9,7 @@ import ee.itcollege.group04_2011.entities.Piiriloik;
 import ee.itcollege.group04_2011.entities.VahtkonndPiiriloigul;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ privileged aspect PiiriloikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piiriloikId}", method = RequestMethod.GET)
-    public String PiiriloikController.show(@PathVariable("piiriloikId") int piiriloikId, Model uiModel) {
+    public String PiiriloikController.show(@PathVariable("piiriloikId") Long piiriloikId, Model uiModel) {
         uiModel.addAttribute("piiriloik", Piiriloik.findPiiriloik(piiriloikId));
         uiModel.addAttribute("itemId", piiriloikId);
         return "piiriloiks/show";
@@ -74,13 +75,13 @@ privileged aspect PiiriloikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piiriloikId}", params = "form", method = RequestMethod.GET)
-    public String PiiriloikController.updateForm(@PathVariable("piiriloikId") int piiriloikId, Model uiModel) {
+    public String PiiriloikController.updateForm(@PathVariable("piiriloikId") Long piiriloikId, Model uiModel) {
         uiModel.addAttribute("piiriloik", Piiriloik.findPiiriloik(piiriloikId));
         return "piiriloiks/update";
     }
     
     @RequestMapping(value = "/{piiriloikId}", method = RequestMethod.DELETE)
-    public String PiiriloikController.delete(@PathVariable("piiriloikId") int piiriloikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiiriloikController.delete(@PathVariable("piiriloikId") Long piiriloikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Piiriloik.findPiiriloik(piiriloikId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

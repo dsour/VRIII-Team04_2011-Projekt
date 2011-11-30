@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.AmetPiiripunkti;
 import ee.itcollege.group04_2011.entities.AmetVaeosa;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect AmetController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{ametId}", method = RequestMethod.GET)
-    public String AmetController.show(@PathVariable("ametId") int ametId, Model uiModel) {
+    public String AmetController.show(@PathVariable("ametId") Long ametId, Model uiModel) {
         uiModel.addAttribute("amet", Amet.findAmet(ametId));
         uiModel.addAttribute("itemId", ametId);
         return "amets/show";
@@ -73,13 +74,13 @@ privileged aspect AmetController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{ametId}", params = "form", method = RequestMethod.GET)
-    public String AmetController.updateForm(@PathVariable("ametId") int ametId, Model uiModel) {
+    public String AmetController.updateForm(@PathVariable("ametId") Long ametId, Model uiModel) {
         uiModel.addAttribute("amet", Amet.findAmet(ametId));
         return "amets/update";
     }
     
     @RequestMapping(value = "/{ametId}", method = RequestMethod.DELETE)
-    public String AmetController.delete(@PathVariable("ametId") int ametId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String AmetController.delete(@PathVariable("ametId") Long ametId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Amet.findAmet(ametId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());
