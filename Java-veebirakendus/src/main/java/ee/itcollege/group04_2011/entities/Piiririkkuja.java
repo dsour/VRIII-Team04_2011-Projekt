@@ -32,7 +32,7 @@ public class Piiririkkuja implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PIIRIRIKKUJA_ID")
-	private int piiririkkujaId;
+	private Long piiririkkujaId;
 
 	private String avaja;
 
@@ -79,11 +79,11 @@ public class Piiririkkuja implements Serializable {
     public Piiririkkuja() {
     }
 
-	public int getPiiririkkujaId() {
+	public Long getPiiririkkujaId() {
 		return this.piiririkkujaId;
 	}
 
-	public void setPiiririkkujaId(int piiririkkujaId) {
+	public void setPiiririkkujaId(Long piiririkkujaId) {
 		this.piiririkkujaId = piiririkkujaId;
 	}
 

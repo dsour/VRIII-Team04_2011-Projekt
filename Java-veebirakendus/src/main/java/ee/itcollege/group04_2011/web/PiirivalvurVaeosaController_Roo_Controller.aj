@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.Piirivalvur;
 import ee.itcollege.group04_2011.entities.PiirivalvurVaeosa;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect PiirivalvurVaeosaController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvurVaeosasId}", method = RequestMethod.GET)
-    public String PiirivalvurVaeosaController.show(@PathVariable("piirivalvurVaeosasId") int piirivalvurVaeosasId, Model uiModel) {
+    public String PiirivalvurVaeosaController.show(@PathVariable("piirivalvurVaeosasId") Long piirivalvurVaeosasId, Model uiModel) {
         uiModel.addAttribute("piirivalvurvaeosa", PiirivalvurVaeosa.findPiirivalvurVaeosa(piirivalvurVaeosasId));
         uiModel.addAttribute("itemId", piirivalvurVaeosasId);
         return "piirivalvurvaeosas/show";
@@ -73,13 +74,13 @@ privileged aspect PiirivalvurVaeosaController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvurVaeosasId}", params = "form", method = RequestMethod.GET)
-    public String PiirivalvurVaeosaController.updateForm(@PathVariable("piirivalvurVaeosasId") int piirivalvurVaeosasId, Model uiModel) {
+    public String PiirivalvurVaeosaController.updateForm(@PathVariable("piirivalvurVaeosasId") Long piirivalvurVaeosasId, Model uiModel) {
         uiModel.addAttribute("piirivalvurVaeosa", PiirivalvurVaeosa.findPiirivalvurVaeosa(piirivalvurVaeosasId));
         return "piirivalvurvaeosas/update";
     }
     
     @RequestMapping(value = "/{piirivalvurVaeosasId}", method = RequestMethod.DELETE)
-    public String PiirivalvurVaeosaController.delete(@PathVariable("piirivalvurVaeosasId") int piirivalvurVaeosasId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiirivalvurVaeosaController.delete(@PathVariable("piirivalvurVaeosasId") Long piirivalvurVaeosasId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         PiirivalvurVaeosa.findPiirivalvurVaeosa(piirivalvurVaeosasId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

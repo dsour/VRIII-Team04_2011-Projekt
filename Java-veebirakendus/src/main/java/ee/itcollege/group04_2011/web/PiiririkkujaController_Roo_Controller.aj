@@ -9,6 +9,7 @@ import ee.itcollege.group04_2011.entities.Objekt;
 import ee.itcollege.group04_2011.entities.Piiririkkuja;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ privileged aspect PiiririkkujaController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piiririkkujaId}", method = RequestMethod.GET)
-    public String PiiririkkujaController.show(@PathVariable("piiririkkujaId") int piiririkkujaId, Model uiModel) {
+    public String PiiririkkujaController.show(@PathVariable("piiririkkujaId") Long piiririkkujaId, Model uiModel) {
         uiModel.addAttribute("piiririkkuja", Piiririkkuja.findPiiririkkuja(piiririkkujaId));
         uiModel.addAttribute("itemId", piiririkkujaId);
         return "piiririkkujas/show";
@@ -74,13 +75,13 @@ privileged aspect PiiririkkujaController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piiririkkujaId}", params = "form", method = RequestMethod.GET)
-    public String PiiririkkujaController.updateForm(@PathVariable("piiririkkujaId") int piiririkkujaId, Model uiModel) {
+    public String PiiririkkujaController.updateForm(@PathVariable("piiririkkujaId") Long piiririkkujaId, Model uiModel) {
         uiModel.addAttribute("piiririkkuja", Piiririkkuja.findPiiririkkuja(piiririkkujaId));
         return "piiririkkujas/update";
     }
     
     @RequestMapping(value = "/{piiririkkujaId}", method = RequestMethod.DELETE)
-    public String PiiririkkujaController.delete(@PathVariable("piiririkkujaId") int piiririkkujaId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiiririkkujaController.delete(@PathVariable("piiririkkujaId") Long piiririkkujaId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Piiririkkuja.findPiiririkkuja(piiririkkujaId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

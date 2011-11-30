@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.Ruumiyksus;
 import ee.itcollege.group04_2011.entities.Voodikoht;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect VoodikohtController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{voodikohtId}", method = RequestMethod.GET)
-    public String VoodikohtController.show(@PathVariable("voodikohtId") int voodikohtId, Model uiModel) {
+    public String VoodikohtController.show(@PathVariable("voodikohtId") Long voodikohtId, Model uiModel) {
         uiModel.addAttribute("voodikoht", Voodikoht.findVoodikoht(voodikohtId));
         uiModel.addAttribute("itemId", voodikohtId);
         return "voodikohts/show";
@@ -73,13 +74,13 @@ privileged aspect VoodikohtController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{voodikohtId}", params = "form", method = RequestMethod.GET)
-    public String VoodikohtController.updateForm(@PathVariable("voodikohtId") int voodikohtId, Model uiModel) {
+    public String VoodikohtController.updateForm(@PathVariable("voodikohtId") Long voodikohtId, Model uiModel) {
         uiModel.addAttribute("voodikoht", Voodikoht.findVoodikoht(voodikohtId));
         return "voodikohts/update";
     }
     
     @RequestMapping(value = "/{voodikohtId}", method = RequestMethod.DELETE)
-    public String VoodikohtController.delete(@PathVariable("voodikohtId") int voodikohtId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String VoodikohtController.delete(@PathVariable("voodikohtId") Long voodikohtId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Voodikoht.findVoodikoht(voodikohtId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.SeadusePunkt;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect SeadusePunkt_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM SeadusePunkt o", SeadusePunkt.class).getResultList();
     }
     
-    public static SeadusePunkt SeadusePunkt.findSeadusePunkt(int seadusePunktId) {
+    public static SeadusePunkt SeadusePunkt.findSeadusePunkt(Long seadusePunktId) {
+        if (seadusePunktId == null) return null;
         return entityManager().find(SeadusePunkt.class, seadusePunktId);
     }
     

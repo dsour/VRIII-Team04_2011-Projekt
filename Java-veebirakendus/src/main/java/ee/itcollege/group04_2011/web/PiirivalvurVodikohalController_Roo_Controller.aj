@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.PiirivalvurVodikohal;
 import ee.itcollege.group04_2011.entities.Voodikoht;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect PiirivalvurVodikohalController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public String PiirivalvurVodikohalController.show(@PathVariable("id") int id, Model uiModel) {
+    public String PiirivalvurVodikohalController.show(@PathVariable("id") Long id, Model uiModel) {
         uiModel.addAttribute("piirivalvurvodikohal", PiirivalvurVodikohal.findPiirivalvurVodikohal(id));
         uiModel.addAttribute("itemId", id);
         return "piirivalvurvodikohals/show";
@@ -73,13 +74,13 @@ privileged aspect PiirivalvurVodikohalController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{id}", params = "form", method = RequestMethod.GET)
-    public String PiirivalvurVodikohalController.updateForm(@PathVariable("id") int id, Model uiModel) {
+    public String PiirivalvurVodikohalController.updateForm(@PathVariable("id") Long id, Model uiModel) {
         uiModel.addAttribute("piirivalvurVodikohal", PiirivalvurVodikohal.findPiirivalvurVodikohal(id));
         return "piirivalvurvodikohals/update";
     }
     
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public String PiirivalvurVodikohalController.delete(@PathVariable("id") int id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiirivalvurVodikohalController.delete(@PathVariable("id") Long id, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         PiirivalvurVodikohal.findPiirivalvurVodikohal(id).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

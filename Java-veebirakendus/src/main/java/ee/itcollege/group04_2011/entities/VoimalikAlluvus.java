@@ -32,7 +32,7 @@ public class VoimalikAlluvus implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="VOIMALIK_ALLUVUS_ID")
-	private int voimalikAlluvusId;
+	private Long voimalikAlluvusId;
 
 	private String avaja;
 
@@ -64,11 +64,11 @@ public class VoimalikAlluvus implements Serializable {
     public VoimalikAlluvus() {
     }
 
-	public int getVoimalikAlluvusId() {
+	public Long getVoimalikAlluvusId() {
 		return this.voimalikAlluvusId;
 	}
 
-	public void setVoimalikAlluvusId(int voimalikAlluvusId) {
+	public void setVoimalikAlluvusId(Long voimalikAlluvusId) {
 		this.voimalikAlluvusId = voimalikAlluvusId;
 	}
 

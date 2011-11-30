@@ -11,6 +11,7 @@ import ee.itcollege.group04_2011.entities.VahtkonnaLiige;
 import ee.itcollege.group04_2011.entities.VahtkonndPiiriloigul;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -45,7 +46,7 @@ privileged aspect VahtkondController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vahtkondId}", method = RequestMethod.GET)
-    public String VahtkondController.show(@PathVariable("vahtkondId") int vahtkondId, Model uiModel) {
+    public String VahtkondController.show(@PathVariable("vahtkondId") Long vahtkondId, Model uiModel) {
         uiModel.addAttribute("vahtkond", Vahtkond.findVahtkond(vahtkondId));
         uiModel.addAttribute("itemId", vahtkondId);
         return "vahtkonds/show";
@@ -76,13 +77,13 @@ privileged aspect VahtkondController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vahtkondId}", params = "form", method = RequestMethod.GET)
-    public String VahtkondController.updateForm(@PathVariable("vahtkondId") int vahtkondId, Model uiModel) {
+    public String VahtkondController.updateForm(@PathVariable("vahtkondId") Long vahtkondId, Model uiModel) {
         uiModel.addAttribute("vahtkond", Vahtkond.findVahtkond(vahtkondId));
         return "vahtkonds/update";
     }
     
     @RequestMapping(value = "/{vahtkondId}", method = RequestMethod.DELETE)
-    public String VahtkondController.delete(@PathVariable("vahtkondId") int vahtkondId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String VahtkondController.delete(@PathVariable("vahtkondId") Long vahtkondId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Vahtkond.findVahtkond(vahtkondId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.Vahtkond;
 import ee.itcollege.group04_2011.entities.VahtkonnaLiige;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect VahtkonnaLiigeController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vahtkonnaLiigeId}", method = RequestMethod.GET)
-    public String VahtkonnaLiigeController.show(@PathVariable("vahtkonnaLiigeId") int vahtkonnaLiigeId, Model uiModel) {
+    public String VahtkonnaLiigeController.show(@PathVariable("vahtkonnaLiigeId") Long vahtkonnaLiigeId, Model uiModel) {
         uiModel.addAttribute("vahtkonnaliige", VahtkonnaLiige.findVahtkonnaLiige(vahtkonnaLiigeId));
         uiModel.addAttribute("itemId", vahtkonnaLiigeId);
         return "vahtkonnaliiges/show";
@@ -73,13 +74,13 @@ privileged aspect VahtkonnaLiigeController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vahtkonnaLiigeId}", params = "form", method = RequestMethod.GET)
-    public String VahtkonnaLiigeController.updateForm(@PathVariable("vahtkonnaLiigeId") int vahtkonnaLiigeId, Model uiModel) {
+    public String VahtkonnaLiigeController.updateForm(@PathVariable("vahtkonnaLiigeId") Long vahtkonnaLiigeId, Model uiModel) {
         uiModel.addAttribute("vahtkonnaLiige", VahtkonnaLiige.findVahtkonnaLiige(vahtkonnaLiigeId));
         return "vahtkonnaliiges/update";
     }
     
     @RequestMapping(value = "/{vahtkonnaLiigeId}", method = RequestMethod.DELETE)
-    public String VahtkonnaLiigeController.delete(@PathVariable("vahtkonnaLiigeId") int vahtkonnaLiigeId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String VahtkonnaLiigeController.delete(@PathVariable("vahtkonnaLiigeId") Long vahtkonnaLiigeId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         VahtkonnaLiige.findVahtkonnaLiige(vahtkonnaLiigeId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

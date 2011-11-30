@@ -34,7 +34,7 @@ public class VahtkondIntsidendi implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="VAHTKOND_INTSIDENDIS_ID")
-	private int vahtkondIntsidendisId;
+	private Long vahtkondIntsidendisId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -78,11 +78,11 @@ public class VahtkondIntsidendi implements Serializable {
     public VahtkondIntsidendi() {
     }
 
-	public int getVahtkondIntsidendisId() {
+	public Long getVahtkondIntsidendisId() {
 		return this.vahtkondIntsidendisId;
 	}
 
-	public void setVahtkondIntsidendisId(int vahtkondIntsidendisId) {
+	public void setVahtkondIntsidendisId(Long vahtkondIntsidendisId) {
 		this.vahtkondIntsidendisId = vahtkondIntsidendisId;
 	}
 

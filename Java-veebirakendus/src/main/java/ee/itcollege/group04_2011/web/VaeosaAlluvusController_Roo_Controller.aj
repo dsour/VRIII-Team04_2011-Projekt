@@ -7,6 +7,7 @@ import ee.itcollege.group04_2011.entities.Vaeosa;
 import ee.itcollege.group04_2011.entities.VaeosaAlluvus;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +42,7 @@ privileged aspect VaeosaAlluvusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vaeosaAlluvusId}", method = RequestMethod.GET)
-    public String VaeosaAlluvusController.show(@PathVariable("vaeosaAlluvusId") int vaeosaAlluvusId, Model uiModel) {
+    public String VaeosaAlluvusController.show(@PathVariable("vaeosaAlluvusId") Long vaeosaAlluvusId, Model uiModel) {
         uiModel.addAttribute("vaeosaalluvus", VaeosaAlluvus.findVaeosaAlluvus(vaeosaAlluvusId));
         uiModel.addAttribute("itemId", vaeosaAlluvusId);
         return "vaeosaalluvuses/show";
@@ -72,13 +73,13 @@ privileged aspect VaeosaAlluvusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vaeosaAlluvusId}", params = "form", method = RequestMethod.GET)
-    public String VaeosaAlluvusController.updateForm(@PathVariable("vaeosaAlluvusId") int vaeosaAlluvusId, Model uiModel) {
+    public String VaeosaAlluvusController.updateForm(@PathVariable("vaeosaAlluvusId") Long vaeosaAlluvusId, Model uiModel) {
         uiModel.addAttribute("vaeosaAlluvus", VaeosaAlluvus.findVaeosaAlluvus(vaeosaAlluvusId));
         return "vaeosaalluvuses/update";
     }
     
     @RequestMapping(value = "/{vaeosaAlluvusId}", method = RequestMethod.DELETE)
-    public String VaeosaAlluvusController.delete(@PathVariable("vaeosaAlluvusId") int vaeosaAlluvusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String VaeosaAlluvusController.delete(@PathVariable("vaeosaAlluvusId") Long vaeosaAlluvusId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         VaeosaAlluvus.findVaeosaAlluvus(vaeosaAlluvusId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

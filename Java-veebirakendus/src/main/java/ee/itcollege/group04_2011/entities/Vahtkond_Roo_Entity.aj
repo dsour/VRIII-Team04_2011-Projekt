@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.Vahtkond;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect Vahtkond_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM Vahtkond o", Vahtkond.class).getResultList();
     }
     
-    public static Vahtkond Vahtkond.findVahtkond(int vahtkondId) {
+    public static Vahtkond Vahtkond.findVahtkond(Long vahtkondId) {
+        if (vahtkondId == null) return null;
         return entityManager().find(Vahtkond.class, vahtkondId);
     }
     

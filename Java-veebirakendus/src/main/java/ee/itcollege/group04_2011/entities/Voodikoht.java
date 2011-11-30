@@ -32,7 +32,7 @@ public class Voodikoht implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="VOODIKOHT_ID")
-	private int voodikohtId;
+	private Long voodikohtId;
 
 	private String avaja;
 
@@ -69,11 +69,11 @@ public class Voodikoht implements Serializable {
     public Voodikoht() {
     }
 
-	public int getVoodikohtId() {
+	public Long getVoodikohtId() {
 		return this.voodikohtId;
 	}
 
-	public void setVoodikohtId(int voodikohtId) {
+	public void setVoodikohtId(Long voodikohtId) {
 		this.voodikohtId = voodikohtId;
 	}
 

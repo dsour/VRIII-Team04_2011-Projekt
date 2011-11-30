@@ -7,6 +7,7 @@ import ee.itcollege.group04_2011.entities.Kodakondsus;
 import ee.itcollege.group04_2011.entities.Riik;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +42,7 @@ privileged aspect RiikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{riikId}", method = RequestMethod.GET)
-    public String RiikController.show(@PathVariable("riikId") int riikId, Model uiModel) {
+    public String RiikController.show(@PathVariable("riikId") Long riikId, Model uiModel) {
         uiModel.addAttribute("riik", Riik.findRiik(riikId));
         uiModel.addAttribute("itemId", riikId);
         return "riiks/show";
@@ -72,13 +73,13 @@ privileged aspect RiikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{riikId}", params = "form", method = RequestMethod.GET)
-    public String RiikController.updateForm(@PathVariable("riikId") int riikId, Model uiModel) {
+    public String RiikController.updateForm(@PathVariable("riikId") Long riikId, Model uiModel) {
         uiModel.addAttribute("riik", Riik.findRiik(riikId));
         return "riiks/update";
     }
     
     @RequestMapping(value = "/{riikId}", method = RequestMethod.DELETE)
-    public String RiikController.delete(@PathVariable("riikId") int riikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String RiikController.delete(@PathVariable("riikId") Long riikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Riik.findRiik(riikId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

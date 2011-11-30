@@ -32,7 +32,7 @@ public class VahtkonndPiiriloigul implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="VAHTKOND_PIIRILOIUL_ID")
-	private int vahtkondPiiriloiulId;
+	private Long vahtkondPiiriloiulId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -70,11 +70,11 @@ public class VahtkonndPiiriloigul implements Serializable {
     public VahtkonndPiiriloigul() {
     }
 
-	public int getVahtkondPiiriloiulId() {
+	public Long getVahtkondPiiriloiulId() {
 		return this.vahtkondPiiriloiulId;
 	}
 
-	public void setVahtkondPiiriloiulId(int vahtkondPiiriloiulId) {
+	public void setVahtkondPiiriloiulId(Long vahtkondPiiriloiulId) {
 		this.vahtkondPiiriloiulId = vahtkondPiiriloiulId;
 	}
 

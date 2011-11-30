@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.VaeosaAlluvus;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect VaeosaAlluvus_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM VaeosaAlluvus o", VaeosaAlluvus.class).getResultList();
     }
     
-    public static VaeosaAlluvus VaeosaAlluvus.findVaeosaAlluvus(int vaeosaAlluvusId) {
+    public static VaeosaAlluvus VaeosaAlluvus.findVaeosaAlluvus(Long vaeosaAlluvusId) {
+        if (vaeosaAlluvusId == null) return null;
         return entityManager().find(VaeosaAlluvus.class, vaeosaAlluvusId);
     }
     

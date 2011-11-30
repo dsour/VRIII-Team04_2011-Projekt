@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.RuumiyksuseLiik;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect RuumiyksuseLiik_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM RuumiyksuseLiik o", RuumiyksuseLiik.class).getResultList();
     }
     
-    public static RuumiyksuseLiik RuumiyksuseLiik.findRuumiyksuseLiik(int ruumiyksuseLiikId) {
+    public static RuumiyksuseLiik RuumiyksuseLiik.findRuumiyksuseLiik(Long ruumiyksuseLiikId) {
+        if (ruumiyksuseLiikId == null) return null;
         return entityManager().find(RuumiyksuseLiik.class, ruumiyksuseLiikId);
     }
     

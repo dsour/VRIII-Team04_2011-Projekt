@@ -10,6 +10,7 @@ import ee.itcollege.group04_2011.entities.Seadus;
 import ee.itcollege.group04_2011.entities.SeadusePunkt;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -44,7 +45,7 @@ privileged aspect SeadusePunktController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{seadusePunktId}", method = RequestMethod.GET)
-    public String SeadusePunktController.show(@PathVariable("seadusePunktId") int seadusePunktId, Model uiModel) {
+    public String SeadusePunktController.show(@PathVariable("seadusePunktId") Long seadusePunktId, Model uiModel) {
         uiModel.addAttribute("seadusepunkt", SeadusePunkt.findSeadusePunkt(seadusePunktId));
         uiModel.addAttribute("itemId", seadusePunktId);
         return "seadusepunkts/show";
@@ -75,13 +76,13 @@ privileged aspect SeadusePunktController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{seadusePunktId}", params = "form", method = RequestMethod.GET)
-    public String SeadusePunktController.updateForm(@PathVariable("seadusePunktId") int seadusePunktId, Model uiModel) {
+    public String SeadusePunktController.updateForm(@PathVariable("seadusePunktId") Long seadusePunktId, Model uiModel) {
         uiModel.addAttribute("seadusePunkt", SeadusePunkt.findSeadusePunkt(seadusePunktId));
         return "seadusepunkts/update";
     }
     
     @RequestMapping(value = "/{seadusePunktId}", method = RequestMethod.DELETE)
-    public String SeadusePunktController.delete(@PathVariable("seadusePunktId") int seadusePunktId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String SeadusePunktController.delete(@PathVariable("seadusePunktId") Long seadusePunktId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         SeadusePunkt.findSeadusePunkt(seadusePunktId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

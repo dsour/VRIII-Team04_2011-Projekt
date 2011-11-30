@@ -7,6 +7,7 @@ import ee.itcollege.group04_2011.entities.Ruumiyksus;
 import ee.itcollege.group04_2011.entities.RuumiyksuseLiik;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +42,7 @@ privileged aspect RuumiyksuseLiikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{ruumiyksuseLiikId}", method = RequestMethod.GET)
-    public String RuumiyksuseLiikController.show(@PathVariable("ruumiyksuseLiikId") int ruumiyksuseLiikId, Model uiModel) {
+    public String RuumiyksuseLiikController.show(@PathVariable("ruumiyksuseLiikId") Long ruumiyksuseLiikId, Model uiModel) {
         uiModel.addAttribute("ruumiyksuseliik", RuumiyksuseLiik.findRuumiyksuseLiik(ruumiyksuseLiikId));
         uiModel.addAttribute("itemId", ruumiyksuseLiikId);
         return "ruumiyksuseliiks/show";
@@ -72,13 +73,13 @@ privileged aspect RuumiyksuseLiikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{ruumiyksuseLiikId}", params = "form", method = RequestMethod.GET)
-    public String RuumiyksuseLiikController.updateForm(@PathVariable("ruumiyksuseLiikId") int ruumiyksuseLiikId, Model uiModel) {
+    public String RuumiyksuseLiikController.updateForm(@PathVariable("ruumiyksuseLiikId") Long ruumiyksuseLiikId, Model uiModel) {
         uiModel.addAttribute("ruumiyksuseLiik", RuumiyksuseLiik.findRuumiyksuseLiik(ruumiyksuseLiikId));
         return "ruumiyksuseliiks/update";
     }
     
     @RequestMapping(value = "/{ruumiyksuseLiikId}", method = RequestMethod.DELETE)
-    public String RuumiyksuseLiikController.delete(@PathVariable("ruumiyksuseLiikId") int ruumiyksuseLiikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String RuumiyksuseLiikController.delete(@PathVariable("ruumiyksuseLiikId") Long ruumiyksuseLiikId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         RuumiyksuseLiik.findRuumiyksuseLiik(ruumiyksuseLiikId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

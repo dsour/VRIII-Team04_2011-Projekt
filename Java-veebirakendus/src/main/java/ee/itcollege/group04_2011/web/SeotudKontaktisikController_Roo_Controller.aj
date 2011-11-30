@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.SeotudKontaktisik;
 import ee.itcollege.group04_2011.entities.SuguluseRolliLiik;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect SeotudKontaktisikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvuriKontaktId}", method = RequestMethod.GET)
-    public String SeotudKontaktisikController.show(@PathVariable("piirivalvuriKontaktId") int piirivalvuriKontaktId, Model uiModel) {
+    public String SeotudKontaktisikController.show(@PathVariable("piirivalvuriKontaktId") Long piirivalvuriKontaktId, Model uiModel) {
         uiModel.addAttribute("seotudkontaktisik", SeotudKontaktisik.findSeotudKontaktisik(piirivalvuriKontaktId));
         uiModel.addAttribute("itemId", piirivalvuriKontaktId);
         return "seotudkontaktisiks/show";
@@ -73,13 +74,13 @@ privileged aspect SeotudKontaktisikController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvuriKontaktId}", params = "form", method = RequestMethod.GET)
-    public String SeotudKontaktisikController.updateForm(@PathVariable("piirivalvuriKontaktId") int piirivalvuriKontaktId, Model uiModel) {
+    public String SeotudKontaktisikController.updateForm(@PathVariable("piirivalvuriKontaktId") Long piirivalvuriKontaktId, Model uiModel) {
         uiModel.addAttribute("seotudKontaktisik", SeotudKontaktisik.findSeotudKontaktisik(piirivalvuriKontaktId));
         return "seotudkontaktisiks/update";
     }
     
     @RequestMapping(value = "/{piirivalvuriKontaktId}", method = RequestMethod.DELETE)
-    public String SeotudKontaktisikController.delete(@PathVariable("piirivalvuriKontaktId") int piirivalvuriKontaktId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String SeotudKontaktisikController.delete(@PathVariable("piirivalvuriKontaktId") Long piirivalvuriKontaktId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         SeotudKontaktisik.findSeotudKontaktisik(piirivalvuriKontaktId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

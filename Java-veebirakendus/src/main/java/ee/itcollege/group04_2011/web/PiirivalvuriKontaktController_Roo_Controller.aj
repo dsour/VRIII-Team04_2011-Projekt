@@ -8,6 +8,7 @@ import ee.itcollege.group04_2011.entities.Piirivalvur;
 import ee.itcollege.group04_2011.entities.PiirivalvuriKontakt;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ privileged aspect PiirivalvuriKontaktController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvuriKontaktId}", method = RequestMethod.GET)
-    public String PiirivalvuriKontaktController.show(@PathVariable("piirivalvuriKontaktId") int piirivalvuriKontaktId, Model uiModel) {
+    public String PiirivalvuriKontaktController.show(@PathVariable("piirivalvuriKontaktId") Long piirivalvuriKontaktId, Model uiModel) {
         uiModel.addAttribute("piirivalvurikontakt", PiirivalvuriKontakt.findPiirivalvuriKontakt(piirivalvuriKontaktId));
         uiModel.addAttribute("itemId", piirivalvuriKontaktId);
         return "piirivalvurikontakts/show";
@@ -73,13 +74,13 @@ privileged aspect PiirivalvuriKontaktController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{piirivalvuriKontaktId}", params = "form", method = RequestMethod.GET)
-    public String PiirivalvuriKontaktController.updateForm(@PathVariable("piirivalvuriKontaktId") int piirivalvuriKontaktId, Model uiModel) {
+    public String PiirivalvuriKontaktController.updateForm(@PathVariable("piirivalvuriKontaktId") Long piirivalvuriKontaktId, Model uiModel) {
         uiModel.addAttribute("piirivalvuriKontakt", PiirivalvuriKontakt.findPiirivalvuriKontakt(piirivalvuriKontaktId));
         return "piirivalvurikontakts/update";
     }
     
     @RequestMapping(value = "/{piirivalvuriKontaktId}", method = RequestMethod.DELETE)
-    public String PiirivalvuriKontaktController.delete(@PathVariable("piirivalvuriKontaktId") int piirivalvuriKontaktId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String PiirivalvuriKontaktController.delete(@PathVariable("piirivalvuriKontaktId") Long piirivalvuriKontaktId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         PiirivalvuriKontakt.findPiirivalvuriKontakt(piirivalvuriKontaktId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

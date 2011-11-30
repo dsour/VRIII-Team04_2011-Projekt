@@ -32,7 +32,7 @@ public class Ruumiyksus implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="RUUMIYKSUS_ID")
-	private int ruumiyksusId;
+	private Long ruumiyksusId;
 
 	private String aadress;
 
@@ -83,11 +83,11 @@ public class Ruumiyksus implements Serializable {
     public Ruumiyksus() {
     }
 
-	public int getRuumiyksusId() {
+	public Long getRuumiyksusId() {
 		return this.ruumiyksusId;
 	}
 
-	public void setRuumiyksusId(int ruumiyksusId) {
+	public void setRuumiyksusId(Long ruumiyksusId) {
 		this.ruumiyksusId = ruumiyksusId;
 	}
 

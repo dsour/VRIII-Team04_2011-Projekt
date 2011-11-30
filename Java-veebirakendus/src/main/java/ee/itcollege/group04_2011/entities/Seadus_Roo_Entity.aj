@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.Seadus;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect Seadus_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM Seadus o", Seadus.class).getResultList();
     }
     
-    public static Seadus Seadus.findSeadus(int seaduseId) {
+    public static Seadus Seadus.findSeadus(Long seaduseId) {
+        if (seaduseId == null) return null;
         return entityManager().find(Seadus.class, seaduseId);
     }
     

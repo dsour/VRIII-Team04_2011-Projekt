@@ -7,6 +7,7 @@ import ee.itcollege.group04_2011.entities.Seadus;
 import ee.itcollege.group04_2011.entities.SeadusePunkt;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -41,7 +42,7 @@ privileged aspect SeadusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{seaduseId}", method = RequestMethod.GET)
-    public String SeadusController.show(@PathVariable("seaduseId") int seaduseId, Model uiModel) {
+    public String SeadusController.show(@PathVariable("seaduseId") Long seaduseId, Model uiModel) {
         uiModel.addAttribute("seadus", Seadus.findSeadus(seaduseId));
         uiModel.addAttribute("itemId", seaduseId);
         return "seaduses/show";
@@ -72,13 +73,13 @@ privileged aspect SeadusController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{seaduseId}", params = "form", method = RequestMethod.GET)
-    public String SeadusController.updateForm(@PathVariable("seaduseId") int seaduseId, Model uiModel) {
+    public String SeadusController.updateForm(@PathVariable("seaduseId") Long seaduseId, Model uiModel) {
         uiModel.addAttribute("seadus", Seadus.findSeadus(seaduseId));
         return "seaduses/update";
     }
     
     @RequestMapping(value = "/{seaduseId}", method = RequestMethod.DELETE)
-    public String SeadusController.delete(@PathVariable("seaduseId") int seaduseId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String SeadusController.delete(@PathVariable("seaduseId") Long seaduseId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         Seadus.findSeadus(seaduseId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

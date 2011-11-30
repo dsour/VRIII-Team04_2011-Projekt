@@ -5,6 +5,7 @@ package ee.itcollege.group04_2011.entities;
 
 import ee.itcollege.group04_2011.entities.RiigiAdminYksus;
 import java.lang.Integer;
+import java.lang.Long;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.EntityManager;
@@ -80,7 +81,8 @@ privileged aspect RiigiAdminYksus_Roo_Entity {
         return entityManager().createQuery("SELECT o FROM RiigiAdminYksus o", RiigiAdminYksus.class).getResultList();
     }
     
-    public static RiigiAdminYksus RiigiAdminYksus.findRiigiAdminYksus(int riigiAdminYksusId) {
+    public static RiigiAdminYksus RiigiAdminYksus.findRiigiAdminYksus(Long riigiAdminYksusId) {
+        if (riigiAdminYksusId == null) return null;
         return entityManager().find(RiigiAdminYksus.class, riigiAdminYksusId);
     }
     

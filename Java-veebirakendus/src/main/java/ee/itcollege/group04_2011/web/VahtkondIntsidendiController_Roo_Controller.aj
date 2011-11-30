@@ -9,6 +9,7 @@ import ee.itcollege.group04_2011.entities.Vahtkond;
 import ee.itcollege.group04_2011.entities.VahtkondIntsidendi;
 import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
+import java.lang.Long;
 import java.lang.String;
 import java.util.Collection;
 import javax.servlet.http.HttpServletRequest;
@@ -43,7 +44,7 @@ privileged aspect VahtkondIntsidendiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vahtkondIntsidendisId}", method = RequestMethod.GET)
-    public String VahtkondIntsidendiController.show(@PathVariable("vahtkondIntsidendisId") int vahtkondIntsidendisId, Model uiModel) {
+    public String VahtkondIntsidendiController.show(@PathVariable("vahtkondIntsidendisId") Long vahtkondIntsidendisId, Model uiModel) {
         uiModel.addAttribute("vahtkondintsidendi", VahtkondIntsidendi.findVahtkondIntsidendi(vahtkondIntsidendisId));
         uiModel.addAttribute("itemId", vahtkondIntsidendisId);
         return "vahtkondintsidendis/show";
@@ -74,13 +75,13 @@ privileged aspect VahtkondIntsidendiController_Roo_Controller {
     }
     
     @RequestMapping(value = "/{vahtkondIntsidendisId}", params = "form", method = RequestMethod.GET)
-    public String VahtkondIntsidendiController.updateForm(@PathVariable("vahtkondIntsidendisId") int vahtkondIntsidendisId, Model uiModel) {
+    public String VahtkondIntsidendiController.updateForm(@PathVariable("vahtkondIntsidendisId") Long vahtkondIntsidendisId, Model uiModel) {
         uiModel.addAttribute("vahtkondIntsidendi", VahtkondIntsidendi.findVahtkondIntsidendi(vahtkondIntsidendisId));
         return "vahtkondintsidendis/update";
     }
     
     @RequestMapping(value = "/{vahtkondIntsidendisId}", method = RequestMethod.DELETE)
-    public String VahtkondIntsidendiController.delete(@PathVariable("vahtkondIntsidendisId") int vahtkondIntsidendisId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
+    public String VahtkondIntsidendiController.delete(@PathVariable("vahtkondIntsidendisId") Long vahtkondIntsidendisId, @RequestParam(value = "page", required = false) Integer page, @RequestParam(value = "size", required = false) Integer size, Model uiModel) {
         VahtkondIntsidendi.findVahtkondIntsidendi(vahtkondIntsidendisId).remove();
         uiModel.asMap().clear();
         uiModel.addAttribute("page", (page == null) ? "1" : page.toString());

@@ -34,7 +34,7 @@ public class SeadusePunkt implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="SEADUSE_PUNKT_ID")
-	private int seadusePunktId;
+	private Long seadusePunktId;
 
 	private String avaja;
 
@@ -94,11 +94,11 @@ public class SeadusePunkt implements Serializable {
     public SeadusePunkt() {
     }
 
-	public int getSeadusePunktId() {
+	public Long getSeadusePunktId() {
 		return this.seadusePunktId;
 	}
 
-	public void setSeadusePunktId(int seadusePunktId) {
+	public void setSeadusePunktId(Long seadusePunktId) {
 		this.seadusePunktId = seadusePunktId;
 	}
 
