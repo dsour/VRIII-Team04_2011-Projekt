@@ -1,9 +1,18 @@
 package ee.itcollege.group04_2011.entities;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 /**
@@ -20,29 +29,29 @@ public class RiigiAdminYksuseLiik implements Serializable {
 	@Column(name="RIIGI_ADMIN_YKSUSE_LIK_ID")
 	private Long riigiAdminYksuseLikId;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date alates;
 
 	private String avaja;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date avatud;
 
 	private String kommentaar;
 
 	private String kood;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date kuni;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date muudetud;
 
 	private String muutja;
 
 	private String nimetus;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date suletud;
 
 	private String sulgeja;

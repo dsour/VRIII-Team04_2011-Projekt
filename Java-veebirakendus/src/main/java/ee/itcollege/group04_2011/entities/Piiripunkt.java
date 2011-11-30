@@ -11,9 +11,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 
@@ -33,12 +32,12 @@ public class Piiripunkt implements Serializable {
 	@Column(name="PIIRIPUNKT_ID")
 	private Long piiripunktId;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date alates;
 
 	private String avaja;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date avatud;
 
 	@Column(name="GPS_LATITUDE")
@@ -54,17 +53,17 @@ public class Piiripunkt implements Serializable {
 	@Column(name="KORGUS_MEREPINNAST")
 	private BigDecimal korgusMerepinnast;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date kuni;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date muudetud;
 
 	private String muutja;
 
 	private String nimetus;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date suletud;
 
 	private String sulgeja;

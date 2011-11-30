@@ -10,9 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 
@@ -34,7 +33,7 @@ public class Amet implements Serializable {
 
 	private String avaja;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date avatud;
 
 	@Column(name="ISCO_KOOD")
@@ -42,14 +41,14 @@ public class Amet implements Serializable {
 
 	private String kommentaar;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date muudetud;
 
 	private String muutja;
 
 	private String nimetus;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date suletud;
 
 	private String sulgeja;

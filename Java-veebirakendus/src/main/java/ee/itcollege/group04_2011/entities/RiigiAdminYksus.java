@@ -13,9 +13,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.roo.addon.entity.RooEntity;
 import org.springframework.roo.addon.tostring.RooToString;
 
@@ -36,29 +35,29 @@ public class RiigiAdminYksus implements Serializable {
 	@Column(name="RIIGI_ADMIN_YKSUS_ID")
 	private Long riigiAdminYksusId;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date alates;
 
 	private String avaja;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date avatud;
 
 	private String kommentaar;
 
 	private String kood;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date kuni;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date muudetud;
 
 	private String muutja;
 
 	private String nimetus;
 
-    @Temporal( TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
 	private Date suletud;
 
 	private String sulgeja;
