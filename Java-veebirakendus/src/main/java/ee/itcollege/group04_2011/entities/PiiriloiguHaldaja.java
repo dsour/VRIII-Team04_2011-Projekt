@@ -32,7 +32,7 @@ public class PiiriloiguHaldaja implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PIIRILOIGU_HALDAJA_ID")
-	private int piiriloiguHaldajaId;
+	private Long piiriloiguHaldajaId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -75,11 +75,11 @@ public class PiiriloiguHaldaja implements Serializable {
     public PiiriloiguHaldaja() {
     }
 
-	public int getPiiriloiguHaldajaId() {
+	public Long getPiiriloiguHaldajaId() {
 		return this.piiriloiguHaldajaId;
 	}
 
-	public void setPiiriloiguHaldajaId(int piiriloiguHaldajaId) {
+	public void setPiiriloiguHaldajaId(Long piiriloiguHaldajaId) {
 		this.piiriloiguHaldajaId = piiriloiguHaldajaId;
 	}
 

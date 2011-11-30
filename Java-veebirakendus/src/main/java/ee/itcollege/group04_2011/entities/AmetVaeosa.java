@@ -34,7 +34,7 @@ public class AmetVaeosa implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="AMET_VAEOSAS_ID")
-	private int ametVaeosasId;
+	private Long ametVaeosasId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -76,11 +76,11 @@ public class AmetVaeosa implements Serializable {
     public AmetVaeosa() {
     }
 
-	public int getAmetVaeosasId() {
+	public Long getAmetVaeosasId() {
 		return this.ametVaeosasId;
 	}
 
-	public void setAmetVaeosasId(int ametVaeosasId) {
+	public void setAmetVaeosasId(Long ametVaeosasId) {
 		this.ametVaeosasId = ametVaeosasId;
 	}
 

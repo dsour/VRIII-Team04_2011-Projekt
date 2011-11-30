@@ -30,7 +30,7 @@ public class Amet implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="AMET_ID")
-	private int ametId;
+	private Long ametId;
 
 	private String avaja;
 
@@ -65,11 +65,11 @@ public class Amet implements Serializable {
     public Amet() {
     }
 
-	public int getAmetId() {
+	public Long getAmetId() {
 		return this.ametId;
 	}
 
-	public void setAmetId(int ametId) {
+	public void setAmetId(Long ametId) {
 		this.ametId = ametId;
 	}
 

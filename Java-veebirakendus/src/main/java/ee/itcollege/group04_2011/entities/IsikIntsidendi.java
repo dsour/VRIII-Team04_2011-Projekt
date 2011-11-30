@@ -34,7 +34,7 @@ public class IsikIntsidendi implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="ISIK_INTSIDENDIS_ID")
-	private int isikIntsidendisId;
+	private Long isikIntsidendisId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -78,11 +78,11 @@ public class IsikIntsidendi implements Serializable {
     public IsikIntsidendi() {
     }
 
-	public int getIsikIntsidendisId() {
+	public Long getIsikIntsidendisId() {
 		return this.isikIntsidendisId;
 	}
 
-	public void setIsikIntsidendisId(int isikIntsidendisId) {
+	public void setIsikIntsidendisId(Long isikIntsidendisId) {
 		this.isikIntsidendisId = isikIntsidendisId;
 	}
 

@@ -34,7 +34,7 @@ public class PiiripunktiOrgYksus implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PIIRIPUNKTI_ORG_YKSUS_ID")
-	private int piiripunktiOrgYksusId;
+	private Long piiripunktiOrgYksusId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -83,11 +83,11 @@ public class PiiripunktiOrgYksus implements Serializable {
     public PiiripunktiOrgYksus() {
     }
 
-	public int getPiiripunktiOrgYksusId() {
+	public Long getPiiripunktiOrgYksusId() {
 		return this.piiripunktiOrgYksusId;
 	}
 
-	public void setPiiripunktiOrgYksusId(int piiripunktiOrgYksusId) {
+	public void setPiiripunktiOrgYksusId(Long piiripunktiOrgYksusId) {
 		this.piiripunktiOrgYksusId = piiripunktiOrgYksusId;
 	}
 

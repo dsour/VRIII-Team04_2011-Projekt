@@ -31,7 +31,7 @@ public class Piiripunkt implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PIIRIPUNKT_ID")
-	private int piiripunktId;
+	private Long piiripunktId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -92,11 +92,11 @@ public class Piiripunkt implements Serializable {
     public Piiripunkt() {
     }
 
-	public int getPiiripunktId() {
+	public Long getPiiripunktId() {
 		return this.piiripunktId;
 	}
 
-	public void setPiiripunktId(int piiripunktId) {
+	public void setPiiripunktId(Long piiripunktId) {
 		this.piiripunktId = piiripunktId;
 	}
 

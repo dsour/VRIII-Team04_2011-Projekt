@@ -32,7 +32,7 @@ public class AuastmeMuutumine implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="AUASTME_MUUTUMINE_ID")
-	private int auastmeMuutumineId;
+	private Long auastmeMuutumineId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -70,11 +70,11 @@ public class AuastmeMuutumine implements Serializable {
     public AuastmeMuutumine() {
     }
 
-	public int getAuastmeMuutumineId() {
+	public Long getAuastmeMuutumineId() {
 		return this.auastmeMuutumineId;
 	}
 
-	public void setAuastmeMuutumineId(int auastmeMuutumineId) {
+	public void setAuastmeMuutumineId(Long auastmeMuutumineId) {
 		this.auastmeMuutumineId = auastmeMuutumineId;
 	}
 

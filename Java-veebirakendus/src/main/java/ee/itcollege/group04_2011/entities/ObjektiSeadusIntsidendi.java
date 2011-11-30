@@ -32,7 +32,7 @@ public class ObjektiSeadusIntsidendi implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="OBJEKTI_SEADUS_INTSIDENDIS_ID")
-	private int objektiSeadusIntsidendisId;
+	private Long objektiSeadusIntsidendisId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -72,11 +72,11 @@ public class ObjektiSeadusIntsidendi implements Serializable {
     public ObjektiSeadusIntsidendi() {
     }
 
-	public int getObjektiSeadusIntsidendisId() {
+	public Long getObjektiSeadusIntsidendisId() {
 		return this.objektiSeadusIntsidendisId;
 	}
 
-	public void setObjektiSeadusIntsidendisId(int objektiSeadusIntsidendisId) {
+	public void setObjektiSeadusIntsidendisId(Long objektiSeadusIntsidendisId) {
 		this.objektiSeadusIntsidendisId = objektiSeadusIntsidendisId;
 	}
 

@@ -30,7 +30,7 @@ public class Piiriloik implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PIIRILOIK_ID")
-	private int piiriloikId;
+	private Long piiriloikId;
 
 	private String avaja;
 
@@ -71,11 +71,11 @@ public class Piiriloik implements Serializable {
     public Piiriloik() {
     }
 
-	public int getPiiriloikId() {
+	public Long getPiiriloikId() {
 		return this.piiriloikId;
 	}
 
-	public void setPiiriloikId(int piiriloikId) {
+	public void setPiiriloikId(Long piiriloikId) {
 		this.piiriloikId = piiriloikId;
 	}
 

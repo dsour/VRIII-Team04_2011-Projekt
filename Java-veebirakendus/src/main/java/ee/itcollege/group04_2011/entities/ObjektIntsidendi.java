@@ -34,7 +34,7 @@ public class ObjektIntsidendi implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="OBJEKT_INTSIDENDIS_ID")
-	private int objektIntsidendisId;
+	private Long objektIntsidendisId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -78,11 +78,11 @@ public class ObjektIntsidendi implements Serializable {
     public ObjektIntsidendi() {
     }
 
-	public int getObjektIntsidendisId() {
+	public Long getObjektIntsidendisId() {
 		return this.objektIntsidendisId;
 	}
 
-	public void setObjektIntsidendisId(int objektIntsidendisId) {
+	public void setObjektIntsidendisId(Long objektIntsidendisId) {
 		this.objektIntsidendisId = objektIntsidendisId;
 	}
 

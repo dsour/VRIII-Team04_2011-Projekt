@@ -30,7 +30,7 @@ public class Kodakondsus implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="KODAKONDSUS_ID")
-	private int kodakondsusId;
+	private Long kodakondsusId;
 
     @Temporal( TemporalType.DATE)
 	private Date alates;
@@ -70,11 +70,11 @@ public class Kodakondsus implements Serializable {
     public Kodakondsus() {
     }
 
-	public int getKodakondsusId() {
+	public Long getKodakondsusId() {
 		return this.kodakondsusId;
 	}
 
-	public void setKodakondsusId(int kodakondsusId) {
+	public void setKodakondsusId(Long kodakondsusId) {
 		this.kodakondsusId = kodakondsusId;
 	}
 

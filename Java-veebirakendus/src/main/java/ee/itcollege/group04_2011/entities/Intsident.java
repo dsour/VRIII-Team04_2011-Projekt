@@ -33,7 +33,7 @@ public class Intsident implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="INTSIDENT_ID")
-	private int intsidentId;
+	private Long intsidentId;
 
 	private String avaja;
 
@@ -101,11 +101,11 @@ public class Intsident implements Serializable {
     public Intsident() {
     }
 
-	public int getIntsidentId() {
+	public Long getIntsidentId() {
 		return this.intsidentId;
 	}
 
-	public void setIntsidentId(int intsidentId) {
+	public void setIntsidentId(Long intsidentId) {
 		this.intsidentId = intsidentId;
 	}
 

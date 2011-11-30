@@ -32,7 +32,7 @@ public class KontaktiLiik implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="KONTAKTI_LIIK_ID")
-	private int kontaktiLiikId;
+	private Long kontaktiLiikId;
 
 	private String avaja;
 
@@ -63,11 +63,11 @@ public class KontaktiLiik implements Serializable {
     public KontaktiLiik() {
     }
 
-	public int getKontaktiLiikId() {
+	public Long getKontaktiLiikId() {
 		return this.kontaktiLiikId;
 	}
 
-	public void setKontaktiLiikId(int kontaktiLiikId) {
+	public void setKontaktiLiikId(Long kontaktiLiikId) {
 		this.kontaktiLiikId = kontaktiLiikId;
 	}
 

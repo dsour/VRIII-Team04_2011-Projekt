@@ -32,7 +32,7 @@ public class PiiripunktiAlluvus implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="PIIRIPUNKTI_ALLUVUS_ID")
-	private int piiripunktiAlluvusId;
+	private Long piiripunktiAlluvusId;
 
 	private String alates;
 
@@ -68,11 +68,11 @@ public class PiiripunktiAlluvus implements Serializable {
     public PiiripunktiAlluvus() {
     }
 
-	public int getPiiripunktiAlluvusId() {
+	public Long getPiiripunktiAlluvusId() {
 		return this.piiripunktiAlluvusId;
 	}
 
-	public void setPiiripunktiAlluvusId(int piiripunktiAlluvusId) {
+	public void setPiiripunktiAlluvusId(Long piiripunktiAlluvusId) {
 		this.piiripunktiAlluvusId = piiripunktiAlluvusId;
 	}
 
