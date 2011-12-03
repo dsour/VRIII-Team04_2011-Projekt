@@ -3,26 +3,44 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_group04_2011_entities_Intsident" modelAttribute="intsident" path="/intsidents" render="${empty dependencies}" z="dwYL0WJFrnm+kMM5yG5aiTAXGKU=">
-        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_Intsident_avaja" z="AbebsqzB61NuKHllm24CnLP2nQI="/>
-        <field:datetime dateTimePattern="${intsident_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_Intsident_avatud" z="GUmuD7h8A/4eGv6DcBFdyeu3cOw="/>
-        <field:input field="gpsLatituud" id="c_ee_itcollege_group04_2011_entities_Intsident_gpsLatituud" validationMessageCode="field_invalid_number" z="51jrzEOdE2R8m7favFB2g9XVRPk="/>
-        <field:input field="gpsLongituud" id="c_ee_itcollege_group04_2011_entities_Intsident_gpsLongituud" validationMessageCode="field_invalid_number" z="94NeYalpmVu/CYIeSOLPA59sc14="/>
-        <field:input field="kirjeldus" id="c_ee_itcollege_group04_2011_entities_Intsident_kirjeldus" z="ypytOHgKelTyKoC/Y/sJ4AN2X3g="/>
-        <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_Intsident_kommentaar" z="2NHiZCpSWZIEDSl4OTbH3f7/NNI="/>
-        <field:input field="kood" id="c_ee_itcollege_group04_2011_entities_Intsident_kood" z="Fstw7Gcu9dk3Xpn5hW/U42CnFvE="/>
-        <field:datetime dateTimePattern="${intsident_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_Intsident_muudetud" z="hTwSSrS45nekNksR/U6tBUxuuvs="/>
-        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_Intsident_muutja" z="GERvURLvuSMYxiKALxKA3jt9uW0="/>
-        <field:input field="nimetus" id="c_ee_itcollege_group04_2011_entities_Intsident_nimetus" z="ryiIylMc11bCuaIBU6jDyh+zbf4="/>
+        <table>
+        	<tr>
+        		<td><field:input field="kood" id="c_ee_itcollege_group04_2011_entities_Intsident_kood" z="Fstw7Gcu9dk3Xpn5hW/U42CnFvE="/></td>
+        		<td><field:select field="intsidendiLiik" id="c_ee_itcollege_group04_2011_entities_Intsident_intsidendiLiik" itemValue="intsidendiLiikId" items="${intsidendiliiks}" path="/intsidendiliiks" z="0fw8fApGN+DKvzQhdxfHFRDAIYo="/></td>
+        		<td rowspan="3"><field:textarea field="kirjeldus" id="c_ee_itcollege_group04_2011_entities_Intsident_kirjeldus" z="ypytOHgKelTyKoC/Y/sJ4AN2X3g="/></td>
+        	</tr>
+        	<tr>
+
+        		<td colspan="2"><field:input field="nimetus" id="c_ee_itcollege_group04_2011_entities_Intsident_nimetus" z="ryiIylMc11bCuaIBU6jDyh+zbf4="/></td>	
+        	</tr>
+        	<tr>
+        		<td colspan="2"><field:select field="piiriloik" id="c_ee_itcollege_group04_2011_entities_Intsident_piiriloik" itemValue="piiriloikId" items="${piiriloiks}" path="/piiriloiks" z="U/vpXTRBC/vQ4D3nGeFLMv0cPBM="/></td>	
+        	</tr>
+        	<tr>
+        		<td><field:input field="gpsLatituud" id="c_ee_itcollege_group04_2011_entities_Intsident_gpsLatituud" validationMessageCode="field_invalid_number" z="51jrzEOdE2R8m7favFB2g9XVRPk="/></td>
+        		<td><field:input field="gpsLongituud" id="c_ee_itcollege_group04_2011_entities_Intsident_gpsLongituud" validationMessageCode="field_invalid_number" z="94NeYalpmVu/CYIeSOLPA59sc14="/></td>
+        		<td rowspan="3"><field:textarea field="kommentaar" id="c_ee_itcollege_group04_2011_entities_Intsident_kommentaar" z="2NHiZCpSWZIEDSl4OTbH3f7/NNI="/></td>
+        	</tr>
+        	<tr>
+        		<td colspan="2"><field:datetime dateTimePattern="${intsident_toimumisealgus_date_format}" field="toimumiseAlgus" id="c_ee_itcollege_group04_2011_entities_Intsident_toimumiseAlgus" z="DS7LmKsg9WZIfk9hSZgGMwvTGK4="/></td>	
+        	</tr>
+        	<tr>
+        		<td colspan="2"><field:datetime dateTimePattern="${intsident_toimumiselopp_date_format}" field="toimumiseLopp" id="c_ee_itcollege_group04_2011_entities_Intsident_toimumiseLopp" z="2nwqqPPKxIAkjL7e4vpJ6iE0bsU="/></td>	
+        	</tr>
+        </table>
+          
+        <!--
         <field:datetime dateTimePattern="${intsident_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_Intsident_suletud" z="vS6CvH15/fDzeGGJ5/IAW9fbQrM="/>
         <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_Intsident_sulgeja" z="BXSY+Ch4dbPwNJPYz7aEE/EM39E="/>
-        <field:datetime dateTimePattern="${intsident_toimumisealgus_date_format}" field="toimumiseAlgus" id="c_ee_itcollege_group04_2011_entities_Intsident_toimumiseAlgus" z="DS7LmKsg9WZIfk9hSZgGMwvTGK4="/>
-        <field:datetime dateTimePattern="${intsident_toimumiselopp_date_format}" field="toimumiseLopp" id="c_ee_itcollege_group04_2011_entities_Intsident_toimumiseLopp" z="2nwqqPPKxIAkjL7e4vpJ6iE0bsU="/>
-        <field:select field="intsidendiLiik" id="c_ee_itcollege_group04_2011_entities_Intsident_intsidendiLiik" itemValue="intsidendiLiikId" items="${intsidendiliiks}" path="/intsidendiliiks" z="0fw8fApGN+DKvzQhdxfHFRDAIYo="/>
-        <field:select field="piiriloik" id="c_ee_itcollege_group04_2011_entities_Intsident_piiriloik" itemValue="piiriloikId" items="${piiriloiks}" path="/piiriloiks" z="U/vpXTRBC/vQ4D3nGeFLMv0cPBM="/>
+        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_Intsident_avaja" z="AbebsqzB61NuKHllm24CnLP2nQI="/>
+        <field:datetime dateTimePattern="${intsident_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_Intsident_avatud" z="GUmuD7h8A/4eGv6DcBFdyeu3cOw="/>
+        <field:datetime dateTimePattern="${intsident_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_Intsident_muudetud" z="hTwSSrS45nekNksR/U6tBUxuuvs="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_Intsident_muutja" z="GERvURLvuSMYxiKALxKA3jt9uW0="/>
         <field:simple field="isikIntsidendis" id="c_ee_itcollege_group04_2011_entities_Intsident_isikIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Isik Intsidendi" z="ewM922PPdBEWYr3X9azUbkjQzb0="/>
         <field:simple field="objektIntsidendis" id="c_ee_itcollege_group04_2011_entities_Intsident_objektIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Objekt Intsidendi" z="9i9Q4Tt/UiJBc5GkUDUSxKokxTs="/>
         <field:simple field="piirivalvurIntsidendis" id="c_ee_itcollege_group04_2011_entities_Intsident_piirivalvurIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Piirivalvur Intsidendi" z="4j583NgnaCzGeGGujleLyYQ4WlQ="/>
         <field:simple field="vahtkondIntsidendis" id="c_ee_itcollege_group04_2011_entities_Intsident_vahtkondIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkond Intsidendi" z="V+fi2CCvQdT4oVk+EXWBfwMOWGQ="/>
+    	-->
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_group04_2011_entities_Intsident" render="${not empty dependencies}" z="hnrhhqMS/HikPT2/Ia/bfiwDREo="/>
 </div>
