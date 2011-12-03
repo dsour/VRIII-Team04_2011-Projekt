@@ -14,9 +14,16 @@ import java.io.UnsupportedEncodingException;
 import java.lang.Integer;
 import java.lang.Long;
 import java.lang.String;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Collection;
+import java.util.Date;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -36,6 +43,13 @@ privileged aspect IntsidentController_Roo_Controller {
             return "intsidents/create";
         }
         uiModel.asMap().clear();
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String userName = auth.getName();
+        intsident.setAvaja(userName);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        System.out.println(dateFormat.format(date));
+        intsident.setAvatud(date);
         intsident.persist();
         return "redirect:/intsidents/" + encodeUrlPathSegment(intsident.getIntsidentId().toString(), httpServletRequest);
     }
