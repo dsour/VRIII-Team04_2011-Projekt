@@ -16,7 +16,7 @@
         <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_sulgeja" z="9YmURVutwFgG0rz7H2grYkopFAY="/>
         <field:simple field="adminAlluvuses1" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_adminAlluvuses1" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" z="SiZaRuAwvwZs3HDU5IbBA15QfhM="/>
         <field:simple field="adminAlluvuses2" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_adminAlluvuses2" messageCode="entity_reference_not_managed" messageCodeAttribute="Admin Alluvus" z="mkWYlqGEf4MPmbzK7OUzoZKgWJs="/>
-        <field:input field="riigiAdminYksuseLiik" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_riigiAdminYksuseLiik" z="/0+m+n7SVFDCMQ5hJ91MUgRa0jg="/>
+        <field:select field="riigiAdminYksuseLiik" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_riigiAdminYksuseLiik" itemValue="riigiAdminYksuseLikId" items="${riigiadminyksuseliiks}" path="/riigiadminyksuseliiks" z="BYc5uc6GZcPnX8zwOaBjPAdvlcY="/>
         <field:simple field="ruumiyksuses" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_ruumiyksuses" messageCode="entity_reference_not_managed" messageCodeAttribute="Ruumiyksus" z="RNwgxhXXK3XZraBc/Rj/1bX9geI="/>
         <field:simple field="vaeosas" id="c_ee_itcollege_group04_2011_entities_RiigiAdminYksus_vaeosas" messageCode="entity_reference_not_managed" messageCodeAttribute="Vaeosa" z="feMCxwLJg8/lTU/NpMip/xCrBfg="/>
     </form:create>
