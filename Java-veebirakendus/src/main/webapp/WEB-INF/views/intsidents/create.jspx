@@ -9,7 +9,7 @@
                     <field:input field="kood" id="c_ee_itcollege_group04_2011_entities_Intsident_kood" z="Fstw7Gcu9dk3Xpn5hW/U42CnFvE="/>
                 </td>
                 <td>
-                    <field:select field="intsidendiLiik" id="c_ee_itcollege_group04_2011_entities_Intsident_intsidendiLiik" itemValue="intsidendiLiikId" items="${intsidendiliiks}" path="/intsidendiliiks" z="0fw8fApGN+DKvzQhdxfHFRDAIYo="/>
+                    <field:select field="intsidendiLiik" itemLabel="nimetus" id="c_ee_itcollege_group04_2011_entities_Intsident_intsidendiLiik" itemLabel="nimetus" itemValue="intsidendiLiikId" items="${intsidendiliiks}" path="/intsidendiliiks" z="user-managed"/>
                 </td>
                 <td rowspan="3">
                     <field:textarea field="kirjeldus" id="c_ee_itcollege_group04_2011_entities_Intsident_kirjeldus" z="user-managed"/>
@@ -22,7 +22,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <field:select field="piiriloik" id="c_ee_itcollege_group04_2011_entities_Intsident_piiriloik" itemValue="piiriloikId" items="${piiriloiks}" path="/piiriloiks" z="U/vpXTRBC/vQ4D3nGeFLMv0cPBM="/>
+                    <field:select field="piiriloik" itemLabel="nimetus" id="c_ee_itcollege_group04_2011_entities_Intsident_piiriloik" itemLabel="nimetus" itemValue="piiriloikId" items="${piiriloiks}" path="/piiriloiks" z="user-managed"/>
                 </td>
             </tr>
             <tr>
