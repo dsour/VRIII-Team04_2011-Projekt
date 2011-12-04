@@ -86,10 +86,21 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+    	<description>
+    	</description>
+    	<display-name>InsertTestData</display-name>
+    	<servlet-name>InsertTestData</servlet-name>
+    	<servlet-class>ee.itcollege.group04_2011.web.InsertTestData</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>Java-veebirakendus</servlet-name>
         <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    	<servlet-name>InsertTestData</servlet-name>
+    	<url-pattern>/InsertTestData</url-pattern>
     </servlet-mapping>
     
     <session-config>
