@@ -11,10 +11,6 @@ body {
 	text-align: center;
 }
 
-{
-	width: 30px;
-}
-
 #header {
 	margin-bottom: 1em;
 }
@@ -374,7 +370,4 @@ fieldset th {
 .flag {
 	height: 11px;
 	width: 16px;
-}
-fieldset .c_ee_itcollege_group04_2011_entities_Intsident_kood {
-	width:40px;
 }
