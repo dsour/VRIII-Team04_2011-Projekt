@@ -6,11 +6,13 @@
         <table:table data="${intsidents}" id="l_ee_itcollege_group04_2011_entities_Intsident" path="/intsidents" typeIdFieldName="intsidentId" z="raUN/Xt9V3TaUWysuIsMOeRtt+I=">
             <!-- <table:column id="c_ee_itcollege_group04_2011_entities_Intsident_avaja" property="avaja" z="E65wOm0agOCVd5YaDxWWUQj15Vs="/>
             <table:column date="true" dateTimePattern="${intsident_avatud_date_format}" id="c_ee_itcollege_group04_2011_entities_Intsident_avatud" property="avatud" z="CUlEvAtxkHlOOLBKXd2SIr642mI="/> -->
-            <table:column id="c_ee_itcollege_group04_2011_entities_Intsident_nimetus" property="nimetus"></table:column>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Intsident_nimetus" property="nimetus"/>
             <table:column id="c_ee_itcollege_group04_2011_entities_Intsident_gpsLatituud" property="gpsLatituud" z="8Y7oBGsu7S8UNPiOvKjO9ci5S88="/>
             <table:column id="c_ee_itcollege_group04_2011_entities_Intsident_gpsLongituud" property="gpsLongituud" z="3ElOvYpVcVRz12d9f9FOZQWoUeE="/>
             <table:column id="c_ee_itcollege_group04_2011_entities_Intsident_kirjeldus" property="kirjeldus" z="uiNUh1Fnpo09LHiLFIUKwDGE804="/>
             <table:column id="c_ee_itcollege_group04_2011_entities_Intsident_kommentaar" property="kommentaar" z="/bkPJUjQT1B+sdD3HU1hJVN2T/E="/>
+            <table:column id="c_ee_itcollege_group04_2011_entities_Intsident_avaja" property="avaja" z="E65wOm0agOCVd5YaDxWWUQj15Vs="/>
+            <table:column date="true" dateTimePattern="${intsident_avatud_date_format}" id="c_ee_itcollege_group04_2011_entities_Intsident_avatud" property="avatud" z="CUlEvAtxkHlOOLBKXd2SIr642mI="/>
         </table:table>
     </page:list>
 </div>
