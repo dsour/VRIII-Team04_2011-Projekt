@@ -1,60 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
-	<persistence-unit name="Java-veebirakendus">
-		<class>ee.itcollege.group04_2011.entities.AdminAlluvus</class>
-		<class>ee.itcollege.group04_2011.entities.Amet</class>
-		<class>ee.itcollege.group04_2011.entities.AmetPiiripunkti</class>
-		<class>ee.itcollege.group04_2011.entities.AmetVaeosa</class>
-		<class>ee.itcollege.group04_2011.entities.Auaste</class>
-		<class>ee.itcollege.group04_2011.entities.AuastmeMuutumine</class>
-		<class>ee.itcollege.group04_2011.entities.IntsidendiLiik</class>
-		<class>ee.itcollege.group04_2011.entities.Intsident</class>
-		<class>ee.itcollege.group04_2011.entities.IsikuSeadusIntsidendi</class>
-		<class>ee.itcollege.group04_2011.entities.IsikIntsidendi</class>
-		<class>ee.itcollege.group04_2011.entities.Kodakondsus</class>
-		<class>ee.itcollege.group04_2011.entities.KontaktiLiik</class>
-		<class>ee.itcollege.group04_2011.entities.Objekt</class>
-		<class>ee.itcollege.group04_2011.entities.ObjektiLiik</class>
-		<class>ee.itcollege.group04_2011.entities.ObjektiSeadusIntsidendi</class>
-		<class>ee.itcollege.group04_2011.entities.ObjektIntsidendi</class>
-		<class>ee.itcollege.group04_2011.entities.OrgYksus</class>
-		<class>ee.itcollege.group04_2011.entities.PiiriloiguHaldaja</class>
-		<class>ee.itcollege.group04_2011.entities.Piiriloik</class>
-		<class>ee.itcollege.group04_2011.entities.Piiripunkt</class>
-		<class>ee.itcollege.group04_2011.entities.PiiripunktiAlluvus</class>
-		<class>ee.itcollege.group04_2011.entities.PiiripunktiOrgYksus</class>
-		<class>ee.itcollege.group04_2011.entities.Piiririkkuja</class>
-		<class>ee.itcollege.group04_2011.entities.Piirivalvur</class>
-		<class>ee.itcollege.group04_2011.entities.PiirivalvuriKontakt</class>
-		<class>ee.itcollege.group04_2011.entities.PiirivalvuriSeadusIntsidendi</class>
-		<class>ee.itcollege.group04_2011.entities.PiirivalvurIntsidendi</class>
-		<class>ee.itcollege.group04_2011.entities.PiirivalvurPiiripunkti</class>
-		<class>ee.itcollege.group04_2011.entities.PiirivalvurVaeosa</class>
-		<class>ee.itcollege.group04_2011.entities.PiirivalvurVodikohal</class>
-		<class>ee.itcollege.group04_2011.entities.RiigiAdminYksus</class>
-		<class>ee.itcollege.group04_2011.entities.RiigiAdminYksuseLiik</class>
-		<class>ee.itcollege.group04_2011.entities.Riik</class>
-		<class>ee.itcollege.group04_2011.entities.Ruumiyksus</class>
-		<class>ee.itcollege.group04_2011.entities.RuumiyksuseLiik</class>
-		<class>ee.itcollege.group04_2011.entities.Seadus</class>
-		<class>ee.itcollege.group04_2011.entities.SeadusePunkt</class>
-		<class>ee.itcollege.group04_2011.entities.SeotudKontaktisik</class>
-		<class>ee.itcollege.group04_2011.entities.SuguluseRolliLiik</class>
-		<class>ee.itcollege.group04_2011.entities.Vaeosa</class>
-		<class>ee.itcollege.group04_2011.entities.VaeosaAlluvus</class>
-		<class>ee.itcollege.group04_2011.entities.Vahtkond</class>
-		<class>ee.itcollege.group04_2011.entities.VahtkondIntsidendi</class>
-		<class>ee.itcollege.group04_2011.entities.VahtkonnaLiige</class>
-		<class>ee.itcollege.group04_2011.entities.VahtkonndPiiriloigul</class>
-		<class>ee.itcollege.group04_2011.entities.VoimalikAlluvus</class>
-		<class>ee.itcollege.group04_2011.entities.Voodikoht</class>
-	</persistence-unit>
 <persistence-unit name="persistenceUnit" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect"/>
             <!-- value="create" to build a new database on each run; value="update" to modify an existing database; value="create-drop" means the same as "create" but also drops tables when Hibernate closes; value="validate" makes no changes to the database -->
-            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
             <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>
             <property name="hibernate.connection.charSet" value="UTF-8"/>
             <!-- Uncomment the following two properties for JBoss only -->
