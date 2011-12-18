@@ -32,10 +32,12 @@ public class InsertD {
 	    
 	    Piiririkkuja karu = new Piiririkkuja();
 	    karu.setEesnimi("Karu");
+	    karu.setPerekNimi("Vasja");
 	    karu.persist();
 	    
 	    Piiririkkuja poder = new Piiririkkuja();
 	    poder.setEesnimi("Põder");
+	    poder.setPerekNimi("Uudo");
 	    poder.persist();
 	    
 	    IsikIntsidendi i = new IsikIntsidendi();

@@ -4,18 +4,18 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_ee_itcollege_group04_2011_entities_IsikIntsidendi" modelAttribute="isikIntsidendi" path="/isikintsidendis" render="${empty dependencies}" z="gbcTHLrf8je/1ugtJfWm88fInaM=">
         <field:datetime dateTimePattern="${isikIntsidendi_alates_date_format}" field="alates" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_alates" z="P4fngd7jkgcIbt4JTuTyh/y/IHY="/>
-        <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_avaja" z="mrARY9TvBMZlN+mNzVphvYL3I0I="/>
-        <field:datetime dateTimePattern="${isikIntsidendi_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_avatud" z="svzRWB7xfgtN/FuK5bRAv5K6H+s="/>
+        <!-- <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_avaja" z="mrARY9TvBMZlN+mNzVphvYL3I0I="/>
+        <field:datetime dateTimePattern="${isikIntsidendi_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_avatud" z="svzRWB7xfgtN/FuK5bRAv5K6H+s="/> -->
         <field:input field="kirjeldus" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_kirjeldus" z="MvwIaMy0gDXCGTp/+KsK4mT18Qo="/>
         <field:input field="kommentaar" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_kommentaar" z="OprKDnMXfqcIdCU+/1aYzX7PgHI="/>
         <field:datetime dateTimePattern="${isikIntsidendi_kuni_date_format}" field="kuni" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_kuni" z="mKgfV6//LsRahI3etlmSOA9P03U="/>
-        <field:datetime dateTimePattern="${isikIntsidendi_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_muudetud" z="qtp/LjOHD3LEbNq58pYLo6g1yKM="/>
-        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_muutja" z="qgxQau5jEtBQf9CnH+I13wx1ai8="/>
+        <!-- <field:datetime dateTimePattern="${isikIntsidendi_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_muudetud" z="qtp/LjOHD3LEbNq58pYLo6g1yKM="/>
+        <field:input field="muutja" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_muutja" z="qgxQau5jEtBQf9CnH+I13wx1ai8="/> 
         <field:datetime dateTimePattern="${isikIntsidendi_suletud_date_format}" field="suletud" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_suletud" z="VrhoD25rEnEq2q8sgIq46BrZ/Gw="/>
-        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_sulgeja" z="U0GwCFep5Ri7zCsAm8h3cdGGK4o="/>
+        <field:input field="sulgeja" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_sulgeja" z="U0GwCFep5Ri7zCsAm8h3cdGGK4o="/> -->
         <field:simple field="isikuSeadusIntsidendis" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_isikuSeadusIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Isiku Seadus Intsidendi" z="SmgKNySrel4wuWnkdjk08MvI2mI="/>
         <field:select field="intsident" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_intsident" itemValue="intsidentId" items="${intsidents}" path="/intsidents" z="2rx331fZFGmAkpCV8lrn+GVCT9g="/>
-        <field:select field="piiririkkuja" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_piiririkkuja" itemValue="piiririkkujaId" items="${piiririkkujas}" path="/piiririkkujas" z="A5OnhirGlXfUrnD4KdlGxotmpfM="/>
+        <field:select field="piiririkkuja" id="c_ee_itcollege_group04_2011_entities_IsikIntsidendi_piiririkkuja" itemValue="piiririkkujaId" items="${piiririkkujas}"  path="/piiririkkujas" z="A5OnhirGlXfUrnD4KdlGxotmpfM="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_group04_2011_entities_IsikIntsidendi" render="${not empty dependencies}" z="dpO8VuciNIl7R0IUHn2spUCGAE8="/>
 </div>

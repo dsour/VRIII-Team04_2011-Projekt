@@ -69,7 +69,7 @@
         <field:simple field="objektIntsidendis" id="c_ee_itcollege_group04_2011_entities_Intsident_objektIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Objekt Intsidendi" z="9i9Q4Tt/UiJBc5GkUDUSxKokxTs="/>
         <field:simple field="piirivalvurIntsidendis" id="c_ee_itcollege_group04_2011_entities_Intsident_piirivalvurIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Piirivalvur Intsidendi" z="4j583NgnaCzGeGGujleLyYQ4WlQ="/>
         <field:simple field="vahtkondIntsidendis" id="c_ee_itcollege_group04_2011_entities_Intsident_vahtkondIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkond Intsidendi" z="V+fi2CCvQdT4oVk+EXWBfwMOWGQ="/>
-        -->
+        
         <field:input field="avaja" id="c_ee_itcollege_group04_2011_entities_Intsident_avaja" z="AbebsqzB61NuKHllm24CnLP2nQI="/>
         <field:datetime dateTimePattern="${intsident_avatud_date_format}" field="avatud" id="c_ee_itcollege_group04_2011_entities_Intsident_avatud" z="GUmuD7h8A/4eGv6DcBFdyeu3cOw="/>
         <field:datetime dateTimePattern="${intsident_muudetud_date_format}" field="muudetud" id="c_ee_itcollege_group04_2011_entities_Intsident_muudetud" z="hTwSSrS45nekNksR/U6tBUxuuvs="/>
@@ -80,6 +80,7 @@
         <field:simple field="objektIntsidendis" id="c_ee_itcollege_group04_2011_entities_Intsident_objektIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Objekt Intsidendi" z="9i9Q4Tt/UiJBc5GkUDUSxKokxTs="/>
         <field:simple field="piirivalvurIntsidendis" id="c_ee_itcollege_group04_2011_entities_Intsident_piirivalvurIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Piirivalvur Intsidendi" z="4j583NgnaCzGeGGujleLyYQ4WlQ="/>
         <field:simple field="vahtkondIntsidendis" id="c_ee_itcollege_group04_2011_entities_Intsident_vahtkondIntsidendis" messageCode="entity_reference_not_managed" messageCodeAttribute="Vahtkond Intsidendi" z="V+fi2CCvQdT4oVk+EXWBfwMOWGQ="/>
+    	-->
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_ee_itcollege_group04_2011_entities_Intsident" render="${not empty dependencies}" z="hnrhhqMS/HikPT2/Ia/bfiwDREo="/>
 </div>
